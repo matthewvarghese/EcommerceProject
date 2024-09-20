@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Login from './components/Login';
+import Dashboard from './components/Dashboard';
+import DataSubmissionForm from './components/DataSubmissionForm';
+import Shirt from './components/category/Shirt';
+import Pants from './components/category/Pants';
+import Shorts from './components/category/Shorts';
+import DressShirt from './components/category/Dressshirts';
+import Profile from './components/Profile';
 
-function App() {
+const App = () => {
+  const [userData, setUserData] = useState(null);
+
+  const handleDataSubmit = (data) => {
+    setUserData(data);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/submit-data" element={<DataSubmissionForm onSubmit={handleDataSubmit} />} />
+      <Route path="/profile" element={<Profile userData={userData} />} />
+      <Route path="/shirt" element={<Shirt />} />
+      <Route path="/pants" element={<Pants />} />
+      <Route path="/shorts" element={<Shorts />} />
+      <Route path="/dress-shirt" element={<DressShirt />} />
+    </Routes>
   );
-}
+};
 
 export default App;

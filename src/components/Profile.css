@@ -1,0 +1,49 @@
+/* Profile.css */
+.profile-container {
+    max-width: 600px; /* Limit width for better presentation */
+    margin: 20px auto; /* Center horizontally */
+    padding: 20px; /* Add some padding */
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  h2 {
+    text-align: center; /* Center the title */
+    color: #333; /* Dark text color */
+  }
+  
+  .profile-info {
+    margin-bottom: 20px; /* Spacing below profile info */
+  }
+  
+  .profile-info p {
+    margin: 10px 0; /* Spacing between paragraphs */
+  }
+  
+  strong {
+    color: #0070f3; /* Highlighted label color */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between; /* Space buttons evenly */
+  }
+  
+  .edit-button, .back-button {
+    flex: 1; /* Allow buttons to grow */
+    padding: 10px; /* Inner padding */
+    margin: 0 5px; /* Space between buttons */
+    background-color: #0070f3; /* Primary button color */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth background color change */
+  }
+  
+  .edit-button:hover, .back-button:hover {
+    background-color: #005bb5; /* Darken button on hover */
+  }
+  
