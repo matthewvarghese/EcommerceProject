@@ -4,11 +4,11 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
+  const navigate = useNavigate();  
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    // Implement backend authentication logic here 
+    // Implement backend authentication logic here.
 
     
     if (email === 'test@example.com' && password === 'password') {
