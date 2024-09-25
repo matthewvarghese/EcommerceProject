@@ -8,7 +8,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    // Implement backend authentication logic here.
+    // Implement backend authentication logic here.cd
 
     
     if (email === 'test@example.com' && password === 'password') {
