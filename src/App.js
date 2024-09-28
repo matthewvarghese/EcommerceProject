@@ -8,7 +8,7 @@ import Pants from './components/category/Pants';
 import Shorts from './components/category/Shorts';
 import DressShirt from './components/category/Dressshirts';
 import Profile from './components/Profile';
-
+import Signup from './components/Signup';
 const App = () => {
   const [userData, setUserData] = useState(null);
 
@@ -19,6 +19,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
+      <Route path='/signup'element ={<Signup/>} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/submit-data" element={<DataSubmissionForm onSubmit={handleDataSubmit} />} />
       <Route path="/profile" element={<Profile userData={userData} />} />
