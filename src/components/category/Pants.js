@@ -1,4 +1,4 @@
-// Dashboard.js
+// Pants.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Pants.css'; 
@@ -33,6 +33,7 @@ const Pants = ({ children }) => {
   const goToDressShirts = () => {
     navigate('/dress-shirt'); 
   };
+
   const goToLogout = () => {
     navigate('/'); 
   };
@@ -43,10 +44,10 @@ const Pants = ({ children }) => {
         <h1>Artemis</h1>
         <nav>
           <ul>
-            <li><a href="#" onClick={goToHome}>Home</a></li>
-            <li><a href="#" onClick={goToSubmitData}>Submit Data</a></li>
-            <li><a href="#" onClick={goToProfile}>Profile</a></li>
-            <li><a href="#" onClick={goToLogout}>Logout</a></li>
+            <li><button onClick={goToHome}>Home</button></li>
+            <li><button onClick={goToSubmitData}>Submit Data</button></li>
+            <li><button onClick={goToProfile}>Profile</button></li>
+            <li><button onClick={goToLogout}>Logout</button></li>
           </ul>
         </nav>
       </header>
@@ -54,10 +55,10 @@ const Pants = ({ children }) => {
       <aside className="sidebar">
         <h2>Categories</h2>
         <ul>
-          <li><a href="#" onClick={goToShirts}>T-Shirts</a></li>
-          <li><a href="#" onClick={goToPants}>Pants</a></li>
-          <li><a href="#" onClick={goToShorts}>Shorts</a></li>
-          <li><a href="#" onClick={goToDressShirts}>Dress Shirts</a></li>
+          <li><button onClick={goToShirts}>T-Shirts</button></li>
+          <li><button onClick={goToPants}>Pants</button></li>
+          <li><button onClick={goToShorts}>Shorts</button></li>
+          <li><button onClick={goToDressShirts}>Dress Shirts</button></li>
         </ul>
       </aside>
 

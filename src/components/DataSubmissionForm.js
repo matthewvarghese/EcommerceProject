@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import './DataSubmissionForm.css'; 
+import { submitData } from "../api/data_api"; // Import your submitData function
 
-const DataSubmissionForm = ({ onSubmit }) => {
+const DataSubmissionForm = ({ userEmail }) => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
-    email: '',
+    email: userEmail, // Pre-fill email with the logged-in user's email
     phoneNumber: '',
     age: '',
     gender: '',
@@ -16,32 +17,40 @@ const DataSubmissionForm = ({ onSubmit }) => {
 
   const navigate = useNavigate();
 
+  // Set initial email to userEmail and keep it updated if prop changes
+  useEffect(() => {
+    setFormData(prevData => ({ ...prevData, email: userEmail }));
+  }, [userEmail]);
+
+  // Sanitize inputs to avoid issues like XSS
   const sanitizeInput = (input) => {
     const trimmedInput = input.trim(); 
-    const escapedInput = trimmedInput.replace(/[<>\/]/g, ''); 
+    const escapedInput = trimmedInput.replace(/[<>/]/g, ''); // Removed the unnecessary escape character
     return escapedInput;
   };
 
+  // Update form data on input change, with sanitized values
   const handleChange = (e) => {
     const sanitizedValue = sanitizeInput(e.target.value); 
     setFormData({ ...formData, [e.target.name]: sanitizedValue });
   };
 
-  const handleSubmit = (e) => {
+  // Handle form submission
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      alert('Invalid email format');
-      return;
+    
+    try {
+      const response = await submitData(formData); // Submit data with the email input included
+      console.log(response);
+      if (response.status === 404) {
+        alert('Invalid credentials');
+      }
+      
+      console.log('Success:', response);
+      navigate('/profile'); // Redirect to profile after successful submission
+    } catch (error) {
+      console.error('Error:', error);
     }
-
-    if (!/^[0-9]{10}$/.test(formData.phoneNumber)) {
-      alert('Invalid phone number format. Please enter a 10-digit number.');
-      return;
-    }
-
-    onSubmit(formData);
-    navigate('/profile'); 
   };
 
   return (
@@ -69,7 +78,7 @@ const DataSubmissionForm = ({ onSubmit }) => {
           />
         </div>
         <div className="form-group">
-          <label>Email:</label>
+          <label>Email:</label> {/* Email is now an editable field */}
           <input
             type="email"
             name="email"

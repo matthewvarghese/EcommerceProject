@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Profile.css'; 
+import { profile } from "../api/profile_api"; // Import the profile function
 
-const Profile = ({ userData }) => {
+const Profile = () => {
   const navigate = useNavigate();
+  const [userData, setUserData] = useState(null);
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const data = await profile(); // Call the updated profile function
+        setUserData(data);
+      } catch (error) {
+        console.error("Error fetching profile data:", error);
+      }
+    };
+
+    fetchUserData();
+  }, []);
 
   if (!userData) {
     return <p>No user data available. Please submit your information.</p>;
@@ -16,8 +31,8 @@ const Profile = ({ userData }) => {
   const handleBackToDashboard = () => {
     navigate('/dashboard');
   };
+
   return (
-    
     <div className="profile-container">
       <h2>Your Profile</h2>
       <div className="profile-info">
