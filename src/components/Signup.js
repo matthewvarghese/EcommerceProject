@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './styles.css'; // Ensure this path is correct based on your project structure
+import './styles.css';
 
 const Signup = () => {
   const [username, setUsername] = useState('');
@@ -9,23 +9,23 @@ const Signup = () => {
 
   const handleSignup = async (e) => {
     e.preventDefault();
-
+    
     try {
       const response = await fetch('http://localhost:3000/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, password }), // Sending username and password
+        body: JSON.stringify({ username, password }),
       });
 
       const data = await response.json();
 
       if (response.ok) {
-        alert('Signup successful!'); // Notify user of successful signup
-        navigate('/'); // Redirect to login page
+        alert('Signup successful!');
+        navigate('/');
       } else {
-        alert(data.message || 'Signup failed. Please try again.'); // Show error message
+        alert(data.message || 'Signup failed. Please try again.');
       }
     } catch (error) {
       console.error('Error during signup:', error);
@@ -34,7 +34,6 @@ const Signup = () => {
   };
 
   return (
-    
     <div className="form-container">
       <h2>Sign Up</h2>
       <form onSubmit={handleSignup}>
@@ -49,7 +48,6 @@ const Signup = () => {
             required
             autoComplete="off"
           />
-          
         </div>
         <div className="form-group">
           <label htmlFor="password">Password:</label>
