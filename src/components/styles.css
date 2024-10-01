@@ -1,63 +1,168 @@
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4e1d2; /* Nice tan background */
+  font-family: 'Helvetica Neue', sans-serif;
+  background-image: url('https://t4.ftcdn.net/jpg/02/12/57/01/360_F_212570162_tRkeeoxiZrJ1WL8CoBcd5fDBG0MtTQoC.jpg'); /* Replace with a new image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+/* Transparent overlay to slightly dim the image */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(244, 225, 210, 0.85); /* Tan overlay with transparency */
+  z-index: -1;
+}
 
-h2 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
+/* Login Form Container */
 .form-container {
-    width: 300px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 400px; /* Larger form for better visibility */
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px; /* Softer, more modern look */
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Heading */
+h2 {
+  font-size: 2.5rem; /* Larger heading */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #0070f3;
+  margin: 10px auto;
+}
+
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.2rem; /* Larger labels */
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px; /* Larger input boxes */
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 14px; /* Larger button */
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 30px; /* Larger pill shape */
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #005bb5;
+  transform: translateY(-3px);
+}
+
+/* Signup Button (similar style) */
+.signup-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 14px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 30px; /* Pill shape */
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signup-btn:hover {
+  background-color: #218838;
+  transform: translateY(-3px);
+}
+
+/* Additional Text */
+p {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #666;
+}
+
+p a {
+  color: #0070f3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .form-container {
+      width: 90%; /* Adjust form width on smaller screens */
+      padding: 30px;
   }
 
-  .form-group {
-    margin-bottom: 15px;
+  h2 {
+      font-size: 2rem;
   }
 
-  .form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+  .submit-btn,
+  .signup-btn {
+      font-size: 1rem;
+      padding: 12px;
   }
-
-  .form-group input {
-    width: 100%;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-
-  .submit-btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #472dbb;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .submit-btn:hover {
-    background-color: #4565a0;
-  }
-
-  p {
-    margin-top: 15px;
-  }
+}

@@ -1,194 +1,72 @@
-/* Global Styling */
-body {
-  font-family: 'Helvetica Neue', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f5f0;
-  color: #333;
-}
-
-/* Dashboard Layout */
-.dashboard {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #f0f2f5;
-}
-
-/* Navbar Styling */
-.navbar {
-  background-color: #070707;
-  color: rgb(246, 245, 245);
-  padding: 20px 40px; /* Increased padding for larger header */
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Center horizontally */
-  box-shadow: 0 2px 4px rgba(236, 5, 5, 0.625);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Ensures the navbar is always on top */
-}
-
-.navbar h1 {
-  font-size: 32px; /* Larger font size */
-  margin: 0 0 10px 0; /* Add bottom margin for spacing */
-}
-
-/* Center the nav links in a row */
-.navbar nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-around; /* Space out the buttons */
-  width: 100%; /* Take full width */
-}
-
-.navbar nav ul li {
-  margin: 0; /* Remove left margin */
-}
-
-.navbar nav ul li button {
-  color: white;
-  background-color: transparent;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.navbar nav ul li button:hover {
-  background-color: #0070f3;
-  color: white;
-}
-
-/* Sidebar Styling (Categories on Left) */
+/* Sidebar Styling */
 .sidebar {
-  position: fixed; /* Fixed to stay on the left */
-  top: 80px; /* Start below the navbar */
+  position: fixed;
+  top: 80px;
   left: 0;
   width: 250px;
   background-color: #ffffff;
-  padding: 20px;
+  padding: 30px 20px;
   border-right: 2px solid #f0f0f0;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
-  height: calc(100vh - 80px); /* Full height minus the navbar */
-  overflow-y: auto; /* Add scroll if content overflows */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
 }
 
 .sidebar h2 {
-  font-size: 1.5rem; /* Larger font for the title */
-  margin-bottom: 15px;
+  font-size: 1.75rem; /* Increased font size */
+  margin-bottom: 30px;
   color: #333;
+  text-align: center; /* Center the "Categories" header */
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%; /* Take up the full width of the sidebar */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the buttons */
 }
 
 .sidebar ul li {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  width: 100%; /* Ensure the buttons take full width */
 }
 
 .sidebar ul li button {
-  text-decoration: none;
   color: #333;
   font-weight: bold;
-  display: block;
-  padding: 10px;
-  border-radius: 8px;
-  background-color: transparent;
-  border: 1px solid transparent;
-  transition: background-color 0.3s, border-color 0.3s;
+  font-size: 1.25rem; /* Increase button text size */
+  padding: 15px 20px; /* Increase padding for larger buttons */
+  border-radius: 10px;
+  background-color: #f4f5f0;
+  width: 100%; /* Buttons take the full width */
+  text-align: center;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 
 .sidebar ul li button:hover {
   background-color: #0070f3;
   color: white;
-  border-color: #005bb5; /* Optional border color on hover */
+  border-color: #005bb5;
 }
 
-/* Main Content Area */
-.main-content {
-  margin-left: 270px; /* To make space for the fixed sidebar */
-  margin-top: 120px; /* Adds space for the fixed navbar */
-  padding: 20px 40px;
-  background-color: #f0f2f5;
-  flex: 1;
-}
+/* Adjust button alignment and size for smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    padding: 20px;
+  }
 
-.product-display {
-  text-align: center;
-  padding: 15px;
-}
+  .sidebar ul li button {
+    font-size: 1.1rem; /* Slightly smaller for mobile */
+    padding: 12px 18px;
+  }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 30px;
-  justify-content: center; /* Centers the product grid */
-  margin-top: 40px;
-}
-
-.product-card {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-}
-
-.product-card img {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.product-card h2 {
-  margin: 15px 0;
-  font-size: 1.25rem;
-  color: #333; /* Improved contrast */
-}
-
-.product-card p {
-  color: #666;
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-.product-card button {
-  padding: 10px 20px;
-  background-color: #0070f3;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.product-card button:hover {
-  background-color: #005bb5;
-  transform: translateY(-2px); /* Subtle lift effect */
-}
-
-/* Footer Styling */
-.footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  font-size: 0.875rem;
+  .sidebar h2 {
+    font-size: 1.5rem;
+  }
 }

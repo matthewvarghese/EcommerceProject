@@ -38,7 +38,7 @@ const Signup = () => {
       <h2>Sign Up</h2>
       <form onSubmit={handleSignup}>
         <div className="form-group">
-          <label htmlFor="username">Name:</label>
+          <label htmlFor="username">Email:</label>
           <input
             type="text"
             id="username"

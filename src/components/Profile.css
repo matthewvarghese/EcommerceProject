@@ -1,49 +1,118 @@
 /* Profile.css */
+body {
+  font-family: 'Poppins', sans-serif; /* Modern font for a luxurious feel */
+  background: linear-gradient(135deg, rgb(249, 247, 249), rgb(250, 249, 250)); /* Soft gradient background */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .profile-container {
-    max-width: 600px; /* Limit width for better presentation */
-    margin: 20px auto; /* Center horizontally */
-    padding: 20px; /* Add some padding */
-    background-color: #ffffff; /* White background for contrast */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 700px; /* Increase width for a more spacious look */
+  margin: 50px auto; /* More space above and below */
+  padding: 30px; /* More padding */
+  background: linear-gradient(145deg, #e8e1e1, #dbd1d1); /* Gradient background for the container */
+  border-radius: 20px; /* Softer, more luxurious corners */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Decorative floating elements for a grand look */
+.profile-container::before, .profile-container::after {
+  content: '';
+  position: absolute;
+  background: rgba(0, 112, 243, 0.2); /* Soft blue floating decoration */
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.profile-container::before {
+  top: -100px;
+  left: -100px;
+  background: rgba(255, 150, 100, 0.2); /* Another floating element with a different color */
+}
+
+.profile-container::after {
+  bottom: -100px;
+  right: -100px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 32px; /* Increase font size for grandeur */
+  font-weight: bold;
+  margin-bottom: 30px; /* Add more spacing below */
+  letter-spacing: 1px; /* Slight spacing for elegance */
+}
+
+.profile-info {
+  margin-bottom: 30px; /* More spacing for balance */
+}
+
+.profile-info p {
+  font-size: 18px; /* Increase text size for readability */
+  margin: 15px 0; /* Larger spacing between paragraphs */
+  line-height: 1.6; /* Better line spacing */
+}
+
+strong {
+  color: #0070f3;
+  font-weight: bold;
+  font-size: 20px; /* Make the labels slightly larger */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px; /* Increase space above buttons */
+}
+
+.edit-button, .back-button {
+  flex: 1;
+  padding: 15px; /* More padding for larger buttons */
+  margin: 0 10px; /* Larger space between buttons */
+  background: linear-gradient(135deg, #0070f3, #00bfff); /* Gradient button color */
+  color: white;
+  border: none;
+  border-radius: 30px; /* Smoother, pill-shaped buttons */
+  cursor: pointer;
+  font-size: 18px; /* Increase button font size */
+  font-weight: bold; /* Make the text bolder */
+  text-transform: uppercase; /* Capitalize the text for impact */
+  transition: all 0.3s ease; /* Smooth hover transition */
+  box-shadow: 0 4px 10px rgba(0, 112, 243, 0.3); /* Add button shadow */
+}
+
+.edit-button:hover, .back-button:hover {
+  background: linear-gradient(135deg, #005bb5, #0070f3); /* Darken the gradient on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 8px 15px rgba(0, 112, 243, 0.5); /* Increase shadow on hover */
+}
+
+.edit-button:active, .back-button:active {
+  transform: translateY(1px); /* Slight press-down effect */
+  box-shadow: 0 3px 7px rgba(0, 112, 243, 0.2); /* Reduce shadow when active */
+}
+
+/* Add a subtle fade-in animation for a grand entrance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
   }
-  
-  h2 {
-    text-align: center; /* Center the title */
-    color: #333; /* Dark text color */
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  .profile-info {
-    margin-bottom: 20px; /* Spacing below profile info */
-  }
-  
-  .profile-info p {
-    margin: 10px 0; /* Spacing between paragraphs */
-  }
-  
-  strong {
-    color: #0070f3; /* Highlighted label color */
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: space-between; /* Space buttons evenly */
-  }
-  
-  .edit-button, .back-button {
-    flex: 1; /* Allow buttons to grow */
-    padding: 10px; /* Inner padding */
-    margin: 0 5px; /* Space between buttons */
-    background-color: #0070f3; /* Primary button color */
-    color: white; /* White text */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 16px; /* Font size */
-    transition: background-color 0.3s; /* Smooth background color change */
-  }
-  
-  .edit-button:hover, .back-button:hover {
-    background-color: #005bb5; /* Darken button on hover */
-  }
-  
+}
+
+.profile-container {
+  animation: fadeIn 0.8s ease-in-out; /* Smooth fade-in animation */
+}
+
