@@ -10,7 +10,7 @@ const Profile = () => {
     useEffect(() => {
         const fetchUserProfile = async () => {
             try {
-                const response = await fetch('https://teal-fenglisu-217183.netlify.app/api/profile', {
+                const response = await fetch('http://localhost:3000/api/profile', {
                     method: 'GET',
                     credentials: 'include', // Include cookies if needed
                 });

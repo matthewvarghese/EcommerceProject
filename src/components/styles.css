@@ -10,9 +10,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f4e1d2; /* Nice tan background */
+  background-color: #f4e1d2; /* Nice tan background   background-image: url('https://t4.ftcdn.net/jpg/02/12/57/01/360_F_212570162_tRkeeoxiZrJ1WL8CoBcd5fDBG0MtTQoC.jpg'); Replace with a new image URL
+  */
   font-family: 'Helvetica Neue', sans-serif;
-  background-image: url('https://t4.ftcdn.net/jpg/02/12/57/01/360_F_212570162_tRkeeoxiZrJ1WL8CoBcd5fDBG0MtTQoC.jpg'); /* Replace with a new image URL */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -1,7 +1,7 @@
 // Dashboard.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Dressshirts.css'; 
+import './Shirt.css'; 
 
 const Dressshirts = ({ children }) => {
   const navigate = useNavigate();
@@ -59,27 +59,15 @@ const Dressshirts = ({ children }) => {
           <li><button onClick={goToPants}>Pants</button></li>
           <li><button onClick={goToShorts}>Shorts</button></li>
           <li><button onClick={goToDressShirts}>Dress Shirts</button></li>
+          <li>
+              <form action="http://localhost:3000/create-checkout-session" method="POST">
+                <button type="submit">Checkout</button>
+              </form>
+            </li>
         </ul>
       </aside>
 
-      <main className="main-content">
-        <section className="product-display">
-          <h2>Dress Shirts</h2>
-          <div className="product-grid">
-            {/* Example Product */}
-            <div className="product-card">
-              <img src="path_to_image.jpg" alt="Product Name" />
-              <h3>Product Name</h3>
-              <p>$29.99</p>
-              <button>Add to Cart</button>
-            </div>
-            {/* Add more product cards as needed */}
-          </div>
-        </section>
-        
-        {/* Render child components here */}
-        {children}
-      </main>
+      
 
       <footer className="footer">
         <p>&copy; 2024 My Clothing Shop. All rights reserved.</p>

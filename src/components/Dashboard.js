@@ -2,10 +2,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Dashboard.css';
+import useProducts from '../components/useProducts';
+import Product from './Product';
 
 const Dashboard = ({ children }) => {
   const navigate = useNavigate();
-
+const { products, loading, error } = useProducts();
   const goToProfile = () => navigate('/profile');
   const goToHome = () => navigate('/dashboard');
   const goToSubmitData = () => navigate('/submit-data');
@@ -25,6 +27,11 @@ const Dashboard = ({ children }) => {
             <li><button onClick={goToSubmitData}>Submit Data</button></li>
             <li><button onClick={goToProfile}>Profile</button></li>
             <li><button onClick={goToLogout}>Logout</button></li>
+            <li>
+              <form action="http://localhost:3000/create-checkout-session" method="POST">
+                <button type="submit">Checkout</button>
+              </form>
+            </li>
           </ul>
         </nav>
       </header>
@@ -42,24 +49,18 @@ const Dashboard = ({ children }) => {
       <main className="main-content">
         <section className="product-display">
           <h2>Featured Products</h2>
+          {loading && <p>Loading products...</p>}
+          {error && <p>Error: {error}</p>}
           <div className="product-grid">
-            {/* Example Product */}
-            <div className="product-card">
-              <img src="path_to_image.jpg" alt="Product Name" />
-              <h3>Product Name</h3>
-              <p>$29.99</p>
-              <button>Add to Cart</button>
-            </div>
-            {/* Add more product cards as needed */}
+            {products.map(product => (
+              <Product key={product.id} product={product} />
+            ))}
           </div>
         </section>
-        
-        {/* Render child components here */}
-        {children}
       </main>
 
       <footer className="footer">
-        <p>&copy; 2024 My Clothing Shop. All rights reserved.</p>
+        <p>&copy; 2024 Artemis. All rights reserved.</p>
       </footer>
     </div>
   );

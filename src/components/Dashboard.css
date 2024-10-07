@@ -55,6 +55,13 @@
   border-color: #005bb5;
 }
 
+/* New CSS for Product Images */
+.product-image {
+  width: 100px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
 /* Adjust button alignment and size for smaller screens */
 @media (max-width: 768px) {
   .sidebar {

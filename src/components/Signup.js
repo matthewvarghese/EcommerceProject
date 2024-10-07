@@ -11,7 +11,7 @@ const Signup = () => {
     e.preventDefault();
     
     try {
-      const response = await fetch('https://teal-fenglisu-217183.netlify.app/api/signup', {
+      const response = await fetch('http://localhost:3000/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
