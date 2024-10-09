@@ -12,7 +12,7 @@ import Signup from './components/Signup';
 import Success from './Success';
 import Cancel from './Cancel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import FullPageComponent from './FullPageComponent';
+//import FullPageComponent from './FullPageComponent';
 
 const App = () => {
   const [userData, setUserData] = useState(null);
@@ -23,9 +23,7 @@ const App = () => {
   
 
   return (
-    <><div>
-      <FullPageComponent />
-    </div><Routes>
+    <Routes>
 
         <Route path="/" element={<Login />} />
         <Route path='/signup' element={<Signup />} />
@@ -38,7 +36,7 @@ const App = () => {
         <Route path="/pants" element={<Pants />} />
         <Route path="/shorts" element={<Shorts />} />
         <Route path="/dress-shirt" element={<DressShirt />} />
-      </Routes></>
+      </Routes>
 
   );
 };
