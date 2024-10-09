@@ -1,46 +1,23 @@
-// Pants.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Pants.css'; 
+import './Dashboard.css';
+import useProducts from '../components/useProducts';
+import Product from './Product';
 
-
-const Pants = ({ children }) => {
+const Shirt = ({ children }) => {
   const navigate = useNavigate();
-
-  const goToProfile = () => {
-    navigate('/profile'); 
-  };
-
-  const goToHome = () => {
-    navigate('/dashboard'); 
-  };
-
-  const goToSubmitData = () => {
-    navigate('/submit-data'); 
-  };
-
-  const goToShirts = () => {
-    navigate('/shirt'); 
-  };
-
-  const goToPants = () => {
-    navigate('/pants'); 
-  };
-
-  const goToShorts = () => {
-    navigate('/shorts');
-  };
-
-  const goToDressShirts = () => {
-    navigate('/dress-shirt'); 
-  };
-
-  const goToLogout = () => {
-    navigate('/'); 
-  };
+const { products, loading, error } = useProducts();
+  const goToProfile = () => navigate('/profile');
+  const goToHome = () => navigate('/dashboard');
+  const goToSubmitData = () => navigate('/submit-data');
+  const goToShirts = () => navigate('/shirt');
+  const goToPants = () => navigate('/pants');
+  const goToShorts = () => navigate('/shorts');
+  const goToDressShirts = () => navigate('/dress-shirt');
+  const goToLogout = () => navigate('/');
 
   return (
-    <div className="dashboard">
+    <div className="Shirt">
       <header className="navbar">
         <h1>Artemis</h1>
         <nav>
@@ -68,7 +45,7 @@ const Pants = ({ children }) => {
         </ul>
       </aside>
 
-      {/* <main className="main-content">
+      <main className="main-content">
         <section className="product-display">
           <h2>Featured Products</h2>
           {loading && <p>Loading products...</p>}
@@ -79,13 +56,13 @@ const Pants = ({ children }) => {
             ))}
           </div>
         </section>
-      </main> */}
+      </main>
 
       <footer className="footer">
-        <p>&copy; 2024 My Clothing Shop. All rights reserved.</p>
+        <p>&copy; 2024 Artemis. All rights reserved.</p>
       </footer>
     </div>
   );
 };
 
-export default Pants;
+export default Shirt;

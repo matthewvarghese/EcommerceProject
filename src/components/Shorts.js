@@ -1,14 +1,12 @@
-// Dashboard.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Dashboard.css';
 import useProducts from '../components/useProducts';
 import Product from './Product';
 
-const Dashboard = ({ children }) => {
+const Shorts = ({ children }) => {
   const navigate = useNavigate();
-  const { products, loading, error } = useProducts();
-
+const { products, loading, error } = useProducts();
   const goToProfile = () => navigate('/profile');
   const goToHome = () => navigate('/dashboard');
   const goToSubmitData = () => navigate('/submit-data');
@@ -19,7 +17,7 @@ const Dashboard = ({ children }) => {
   const goToLogout = () => navigate('/');
 
   return (
-    <div className="dashboard">
+    <div className="Shorts">
       <header className="navbar">
         <h1>Artemis</h1>
         <nav>
@@ -67,4 +65,4 @@ const Dashboard = ({ children }) => {
   );
 };
 
-export default Dashboard;
+export default Shorts;

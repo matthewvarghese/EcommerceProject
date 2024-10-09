@@ -3,14 +3,15 @@ import { Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import DataSubmissionForm from './components/DataSubmissionForm';
-import Shirt from './components/category/Shirt';
-import Pants from './components/category/Pants';
-import Shorts from './components/category/Shorts';
-import DressShirt from './components/category/Dressshirts';
+import Shirt from './components/Shirt';
+import Pants from './components/Pants';
+import Shorts from './components/Shorts';
+import DressShirt from './components/Dressshirts';
 import Profile from './components/Profile';
 import Signup from './components/Signup';
 import Success from './Success';
 import Cancel from './Cancel';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   const [userData, setUserData] = useState(null);
