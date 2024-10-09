@@ -4,7 +4,7 @@ const Product = ({ product }) => {
     const [errorMessage] = useState('');
 
     const handleCheckout = async () => {
-        const response = await fetch('https://e00a-206-81-12-171.ngrok-free.app/create-checkout-session', {
+        const response = await fetch('http://localhost:3001/create-checkout-session', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

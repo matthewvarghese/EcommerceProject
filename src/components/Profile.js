@@ -10,9 +10,9 @@ const Profile = () => {
     useEffect(() => {
         const fetchUserProfile = async () => {
             try {
-                const response = await fetch('https://4e0e-173-59-33-48.ngrok-free.app/api/profile', {
+                const response = await fetch('http://localhost:3001/api/profile', {
                     method: 'GET',
-                    credentials: 'include', // Include cookies if needed
+                    credentials: 'include', 
                 });
 
                 if (!response.ok) {

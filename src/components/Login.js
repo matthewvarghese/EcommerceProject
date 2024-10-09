@@ -29,8 +29,8 @@ const Login = () => {
             });
         }}
       >
-        <h>Welcome to Artemis</h>
-        <r>Please sign in for the best experience!</r>
+        <h1>Welcome to Artemis</h1>
+        <h2>Please sign in for the best experience!</h2>
 
         <div className="input-field">
           <input
@@ -64,40 +64,3 @@ const Login = () => {
 
 export default Login;
 
-// <div>
-    //   <h2>Login</h2>
-    //   <form onSubmit={async (e) => {
-    //     e.preventDefault();
-    //     await LoginAPI(email, password)
-    //       .then((res) => {
-    //         console.log(res)
-    //         if (res.status === 200) {
-    //           navigate('/dashboard');
-    //         } else if (res.status === 404) {
-    //           alert('Invalid credentials');
-    //         }
-    //       })
-    //       .catch((err) => {
-    //         console.log(err)
-    //       })
-    //   }}>
-    //     <label>Email:</label>
-    //     <input
-    //       type="email"
-    //       value={email}
-          
-    //       onChange={(e) => setEmail(e.target.value)}
-    //       required
-    //     />
-    //     <label>Password:</label>
-    //     <input
-    //       type="password"
-    //       value={password}
-    //       onChange={(e) => setPassword(e.target.value)}
-    //       required
-    //     />
-    //     <button type='submit'>Login</button>
-    //   </form>
-    //   <p>Don't have an account?</p>
-    //   <a href="/signup" >Sign up</a>
-    // </div>

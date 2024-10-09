@@ -1,4 +1,4 @@
-// Dashboard.js
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Dashboard.css';
@@ -29,9 +29,9 @@ const Dashboard = ({ children }) => {
             <li><button onClick={goToProfile}>Profile</button></li>
             <li><button onClick={goToLogout}>Logout</button></li>
             <li>
-              <form action="https://e00a-206-81-12-171.ngrok-free.app/create-checkout-session" method="POST">
+              {/* <form action="http://localhost:3001/create-checkout-session" method="POST">
                 <button type="submit">Checkout</button>
-              </form>
+              </form> */}
             </li>
           </ul>
         </nav>

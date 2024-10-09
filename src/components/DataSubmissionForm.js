@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import './DataSubmissionForm.css'; 
-import { submitData } from "../api/data_api"; // Import your submitData function
+import { submitData } from "../api/data_api"; 
 
 const DataSubmissionForm = ({ userEmail }) => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
-    email: userEmail, // Pre-fill email with the logged-in user's email
+    email: userEmail, 
     phoneNumber: '',
     age: '',
     gender: '',
@@ -17,37 +17,35 @@ const DataSubmissionForm = ({ userEmail }) => {
 
   const navigate = useNavigate();
 
-  // Set initial email to userEmail and keep it updated if prop changes
+
   useEffect(() => {
     setFormData(prevData => ({ ...prevData, email: userEmail }));
   }, [userEmail]);
 
-  // Sanitize inputs to avoid issues like XSS
+
   const sanitizeInput = (input) => {
     const trimmedInput = input.trim(); 
-    const escapedInput = trimmedInput.replace(/[<>/]/g, ''); // Removed the unnecessary escape character
+    const escapedInput = trimmedInput.replace(/[<>/]/g, ''); 
     return escapedInput;
   };
 
-  // Update form data on input change, with sanitized values
   const handleChange = (e) => {
     const sanitizedValue = sanitizeInput(e.target.value); 
     setFormData({ ...formData, [e.target.name]: sanitizedValue });
   };
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     
     try {
-      const response = await submitData(formData); // Submit data with the email input included
+      const response = await submitData(formData);
       console.log(response);
       if (response.status === 404) {
         alert('Invalid credentials');
       }
       
       console.log('Success:', response);
-      navigate('/profile'); // Redirect to profile after successful submission
+      navigate('/profile'); 
     } catch (error) {
       console.error('Error:', error);
     }
@@ -78,7 +76,7 @@ const DataSubmissionForm = ({ userEmail }) => {
           />
         </div>
         <div className="form-group">
-          <label>Email:</label> {/* Email is now an editable field */}
+          <label>Email:</label> 
           <input
             type="email"
             name="email"
