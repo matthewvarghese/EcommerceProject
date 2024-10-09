@@ -4,7 +4,7 @@ const Product = ({ product }) => {
     const [errorMessage] = useState('');
 
     const handleCheckout = async () => {
-        const response = await fetch('http://localhost:3001/create-checkout-session', {
+        const response = await fetch('https://mtv-backend-576e0c5cc332.herokuapp.com/create-checkout-session', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

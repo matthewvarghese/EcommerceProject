@@ -10,7 +10,7 @@ const Profile = () => {
     useEffect(() => {
         const fetchUserProfile = async () => {
             try {
-                const response = await fetch('http://localhost:3001/api/profile', {
+                const response = await fetch('https://mtv-backend-576e0c5cc332.herokuapp.com/api/profile', {
                     method: 'GET',
                     credentials: 'include', 
                 });

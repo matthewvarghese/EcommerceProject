@@ -1,5 +1,5 @@
 export async function submitData(data) {
-    return await fetch('hhttp://localhost:3001/api/submit-data', {
+    return await fetch('https://mtv-backend-576e0c5cc332.herokuapp.com/api/submit-data', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

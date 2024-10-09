@@ -1,5 +1,5 @@
 export async function profile() {
-    return await fetch('http://localhost:3001/api/profile', {
+    return await fetch('https://mtv-backend-576e0c5cc332.herokuapp.com/api/profile', {
         method: 'GET', 
         headers: {
             'Content-Type': 'application/json',

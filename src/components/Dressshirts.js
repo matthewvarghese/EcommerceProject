@@ -27,7 +27,7 @@ const { products, loading, error } = useProducts();
             <li><button onClick={goToProfile}>Profile</button></li>
             <li><button onClick={goToLogout}>Logout</button></li>
             <li>
-              <form action="http://localhost:3001/create-checkout-session" method="POST">
+              <form action="https://mtv-backend-576e0c5cc332.herokuapp.com/create-checkout-session" method="POST">
                 <button type="submit">Checkout</button>
               </form>
             </li>
