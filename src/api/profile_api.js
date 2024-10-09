@@ -1,5 +1,5 @@
 export async function profile() {
-    return await fetch('http://localhost:3000/api/profile', {
+    return await fetch('https://teal-fenglisu-217183.netlify.appapi/profile', {
         method: 'GET', 
         headers: {
             'Content-Type': 'application/json',

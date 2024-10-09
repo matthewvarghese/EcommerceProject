@@ -1,5 +1,5 @@
 export async function LoginAPI(email, password) {
-  const response = await fetch('http://localhost:3000/api/login', {
+  const response = await fetch('https://teal-fenglisu-217183.netlify.app/api/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
