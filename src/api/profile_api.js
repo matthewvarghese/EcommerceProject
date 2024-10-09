@@ -1,5 +1,5 @@
 export async function profile() {
-    return await fetch('https://teal-fenglisu-217183.netlify.appapi/profile', {
+    return await fetch('https://4e0e-173-59-33-48.ngrok-free.app/api/profile', {
         method: 'GET', 
         headers: {
             'Content-Type': 'application/json',
