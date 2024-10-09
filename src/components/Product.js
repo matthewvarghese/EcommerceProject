@@ -4,7 +4,7 @@ const Product = ({ product }) => {
     const [errorMessage] = useState('');
 
     const handleCheckout = async () => {
-        const response = await fetch('https://teal-fenglisu-217183.netlify.app/create-checkout-session', {
+        const response = await fetch('https://4e0e-173-59-33-48.ngrok-free.app/create-checkout-session', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

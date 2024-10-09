@@ -11,7 +11,7 @@ const Signup = () => {
     e.preventDefault();
     
     try {
-      const response = await fetch('https://teal-fenglisu-217183.netlify.app/api/signup', {
+      const response = await fetch('https://4e0e-173-59-33-48.ngrok-free.app/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
