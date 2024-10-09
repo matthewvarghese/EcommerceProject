@@ -1,5 +1,5 @@
 export async function profile() {
-    return await fetch('https://4e0e-173-59-33-48.ngrok-free.app/api/profile', {
+    return await fetch('https://335b-206-81-12-171.ngrok-free.app/api/profile', {
         method: 'GET', 
         headers: {
             'Content-Type': 'application/json',

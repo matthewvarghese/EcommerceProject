@@ -1,5 +1,5 @@
 export async function submitData(data) {
-    return await fetch('https://4e0e-173-59-33-48.ngrok-free.app/api/submit-data', {
+    return await fetch('https://335b-206-81-12-171.ngrok-free.app/api/submit-data', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
