@@ -8,7 +8,7 @@ const useProducts = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('https://my-app.herokuapp.com/api/products');
+        const response = await fetch('https://mtv-backend-576e0c5cc332.herokuapp.com/api/products');
         if (!response.ok) throw new Error('Failed to fetch products');
         const data = await response.json();
         setProducts(data);

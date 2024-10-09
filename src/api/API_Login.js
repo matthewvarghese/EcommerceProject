@@ -1,5 +1,5 @@
 export async function LoginAPI(email, password) {
-  const response = await fetch('https://my-app.herokuapp.com/api/login', {
+  const response = await fetch('https://mtv-backend-576e0c5cc332.herokuapp.com/api/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
