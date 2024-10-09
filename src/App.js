@@ -12,6 +12,7 @@ import Signup from './components/Signup';
 import Success from './Success';
 import Cancel from './Cancel';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import FullPageComponent from './FullPageComponent';
 
 const App = () => {
   const [userData, setUserData] = useState(null);
@@ -22,21 +23,22 @@ const App = () => {
   
 
   return (
-    
-    <Routes>
+    <><div>
+      <FullPageComponent />
+    </div><Routes>
 
-      <Route path="/" element={<Login />} />
-      <Route path='/signup' element={<Signup />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/success" element={<Success />} />
-      <Route path="/cancel" element={<Cancel />} />
-      <Route path="/submit-data" element={<DataSubmissionForm onSubmit={handleDataSubmit} />} />
-      <Route path="/profile" element={<Profile userData={userData} />} />
-      <Route path="/shirt" element={<Shirt />} />
-      <Route path="/pants" element={<Pants />} />
-      <Route path="/shorts" element={<Shorts />} />
-      <Route path="/dress-shirt" element={<DressShirt />} />
-    </Routes>
+        <Route path="/" element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/success" element={<Success />} />
+        <Route path="/cancel" element={<Cancel />} />
+        <Route path="/submit-data" element={<DataSubmissionForm onSubmit={handleDataSubmit} />} />
+        <Route path="/profile" element={<Profile userData={userData} />} />
+        <Route path="/shirt" element={<Shirt />} />
+        <Route path="/pants" element={<Pants />} />
+        <Route path="/shorts" element={<Shorts />} />
+        <Route path="/dress-shirt" element={<DressShirt />} />
+      </Routes></>
 
   );
 };
