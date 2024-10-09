@@ -1,5 +1,5 @@
 export async function LoginAPI(email, password) {
-  const response = await fetch('http://206.81.12.171/api/login', {
+  const response = await fetch('https://my-app.herokuapp.com/api/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -8,7 +8,7 @@ export async function LoginAPI(email, password) {
   });
   
     localStorage.setItem('userEmail', email);
-    global.loggedInUserEmail = email; // Set this when the user logs in
+    global.loggedInUserEmail = email; 
 
     return response;
   }
