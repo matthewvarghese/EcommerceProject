@@ -71,13 +71,13 @@ body {
   position: fixed;
   left: 0;
   width: 200px;
-  border-right: 2px solid black;
+  border-right: 2px solid white;
   overflow-y: auto;
 }
 
 .sidebar h2 {
   font-size: 1.5rem;
- border-bottom: 2px solid black;
+ border-bottom: 2px solid white;
 
   margin-bottom: 20px;
   color: #ffffff;
@@ -107,15 +107,15 @@ body {
 .main-content {
   margin-left: 230px;
   padding: 20px;
-  background-color: #ffffff; /* Keep background black */
-  color: #000000;
+  background-color: #000000; /* Keep background black */
+  color: #ffffff;
   min-height: 100vh;
 }
 
 .product-display h2 {
   font-size: 2rem;
   font-weight: bold;
-  color: rgb(0, 0, 0);
+  color: rgb(174, 71, 71);
   text-align: center;
   margin-bottom: 20px;
 }
