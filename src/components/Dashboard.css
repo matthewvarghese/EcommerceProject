@@ -26,7 +26,7 @@ body {
 
 .navbar h1 {
   font-size: 3rem;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   margin-bottom: 20px;
   
 }
@@ -64,7 +64,7 @@ body {
 
 /* Sidebar Styling */
 .sidebar {
-  background-color: #ffffff;
+  background-color: #000000;
   padding: 20px;
   height: calc(700vh - 150px); /* Adjust the height so it fits below header */
   top: 95px; /* Moved down to avoid blocking the title */
@@ -80,19 +80,19 @@ body {
  border-bottom: 2px solid black;
 
   margin-bottom: 20px;
-  color: #000000;
+  color: #ffffff;
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
-  color: rgb;
+  color: #ffffff;
   margin: 0;
 }
 
 .sidebar ul li button {
   background-color: transparent;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   border: none;
   font-size: 1rem;
   cursor: pointer;
@@ -100,7 +100,7 @@ body {
 }
 
 .sidebar ul li button:hover {
-  color: #ff5733;
+  color: #33ffe7;
 }
 
 /* Main Content Area */
@@ -108,7 +108,7 @@ body {
   margin-left: 230px;
   padding: 20px;
   background-color: #ffffff; /* Keep background black */
-  color: #ffffff;
+  color: #000000;
   min-height: 100vh;
 }
 
