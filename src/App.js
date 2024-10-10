@@ -4,9 +4,6 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import DataSubmissionForm from './components/DataSubmissionForm';
 import Shirt from './components/Shirt';
-import Pants from './components/Pants';
-import Shorts from './components/Shorts';
-import DressShirt from './components/Dressshirts';
 import Profile from './components/Profile';
 import Signup from './components/Signup';
 import Success from './Success';
@@ -33,9 +30,6 @@ const App = () => {
         <Route path="/submit-data" element={<DataSubmissionForm onSubmit={handleDataSubmit} />} />
         <Route path="/profile" element={<Profile userData={userData} />} />
         <Route path="/shirt" element={<Shirt />} />
-        <Route path="/pants" element={<Pants />} />
-        <Route path="/shorts" element={<Shorts />} />
-        <Route path="/dress-shirt" element={<DressShirt />} />
       </Routes>
 
   );
