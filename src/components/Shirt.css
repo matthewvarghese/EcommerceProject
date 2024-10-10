@@ -115,7 +115,7 @@ body {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.6);
     color: #ffffff;
-    min-height: 100vh;
+    /* min-height: 100vh; */
   }
   
   .product-display h2 {
