@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Dashboard.css';
+import './Shirt.css';
 import useProducts from '../components/useProducts';
 import Product from './Product';
 
-const Shirts = ({ children }) => {
+const Shirt = ({ children }) => {
   const navigate = useNavigate();
   const { products, loading, error } = useProducts();
 
@@ -58,4 +57,4 @@ const Shirts = ({ children }) => {
   );
 };
 
-export default Shirts;
+export default Shirt;
