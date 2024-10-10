@@ -3,34 +3,32 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0; /* Monotone background */
-  color: #000000; /* Default black text */
+  background-color: #817777; /* Black background */
+  color: #ffffff; /* White text */
 }
 
 .dashboard {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #000000; /* Ensure the entire dashboard is black */
 }
+
 
 /* Navbar Styling */
 .navbar {
-  background-color: transparent;
-  padding: 40px 0; /* Adjust spacing for centering */
+  background-color: #000000;
+  padding: 20px;
   text-align: center;
   margin-bottom: 40px;
-  border-bottom: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-bottom: 2px solid black;
 }
 
 .navbar h1 {
   font-size: 3rem;
-  color: #000000; /* Black color for "Artemis" */
+  color: rgb(0, 0, 0);
   margin-bottom: 20px;
-  font-family: 'Cinzel', serif; /* Fancy font for Artemis */
+  
 }
 
 .navbar nav ul {
@@ -39,7 +37,6 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  gap: 20px; /* Spacing between buttons */
 }
 
 .navbar nav ul li {
@@ -47,9 +44,9 @@ body {
 }
 
 .navbar nav ul li button {
-  background-color: transparent;
-  color: #000000; /* Black button text */
-  border: 2px solid #000000;
+  background-color: #7ec7bf;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(255, 255, 255);
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: bold;
@@ -59,27 +56,30 @@ body {
 }
 
 .navbar nav ul li button:hover {
-  background-color: #d3d3d3;
-  color: #000000;
+  background-color: #eadede;
+  color: white;
+  border-color: #817777;
 }
 
 /* Sidebar Styling */
 .sidebar {
-  background-color: #e0e0e0;
+  background-color: #7ec7bf;
   padding: 20px;
-  height: calc(100vh - 150px);
-  top: 95px;
+  height: calc(700vh - 150px); /* Adjust the height so it fits below header */
+  top: 95px; /* Moved down to avoid blocking the title */
   position: fixed;
   left: 0;
   width: 200px;
+  border-right: 2px solid black;
   overflow-y: auto;
 }
 
 .sidebar h2 {
   font-size: 1.5rem;
-  border-bottom: 2px solid #000000;
+ border-bottom: 2px solid black;
+
   margin-bottom: 20px;
-  color: #000000; /* Black sidebar title */
+  color: #000000;
 }
 
 .sidebar ul {
@@ -90,7 +90,7 @@ body {
 
 .sidebar ul li button {
   background-color: transparent;
-  color: #000000;
+  color: rgb(0, 0, 0);
   border: none;
   font-size: 1rem;
   cursor: pointer;
@@ -105,7 +105,7 @@ body {
 .main-content {
   margin-left: 230px;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #000000; /* Keep background black */
   color: #000000;
   min-height: 100vh;
 }
@@ -113,7 +113,7 @@ body {
 .product-display h2 {
   font-size: 2rem;
   font-weight: bold;
-  color: #000000; /* Black color for "Featured Products" */
+  color: rgb(0, 0, 0);
   text-align: center;
   margin-bottom: 20px;
 }
@@ -125,10 +125,44 @@ body {
   padding: 20px;
 }
 
+.product-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  transition: all 0.3s;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-card .product-name, .product-card .product-price {
+  color: rgb(0, 0, 0); /* Ensure product name and price are white */
+  font-size: 1.2rem;
+}
+
+.product-card button {
+  background-color: #ff5733;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.product-card button:hover {
+  background-color: #c70039;
+}
+
 /* Footer */
 .footer {
-  background-color: #f0f0f0;
-  color: #000000;
+  background-color: #7ec7bf;
+  color: rgb(0, 0, 0);
   padding: 20px;
   text-align: center;
 }
