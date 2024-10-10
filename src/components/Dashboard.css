@@ -111,11 +111,11 @@ body {
 
 /* Main Content Area */
 .main-content {
-  margin-left: 230px;
-  padding: 20px;
-  background-color: #000000;
+   margin-left: 230px;
+  padding: 20px; 
+  background-color: rgba(0, 0, 0, 0.5); 
   color: #ffffff;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .product-display h2 {
@@ -148,7 +148,7 @@ body {
 }
 
 .product-card .product-name, .product-card .product-price {
-  color: rgb(0, 0, 0); /* Ensure product name and price are white */
+  color: rgb(0, 0, 0); 
   font-size: 1.2rem;
 }
 
