@@ -13,12 +13,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: transparent; /* Transparent background to let image show through */
 }
 
 /* Navbar Styling */
 .navbar {
-  background-color: rgba(0, 0, 0, 0.1); /* More transparency to let background image show */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent navbar */
   padding: 20px;
   text-align: center;
   border-bottom: 2px solid white;
@@ -42,7 +41,7 @@ body {
 }
 
 .navbar nav ul li button {
-  background-color: rgba(0, 0, 0, 0.5); /* Transparent button */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent buttons */
   color: #ffffff;
   border: 2px solid #ffffff;
   padding: 10px 20px;
@@ -61,9 +60,9 @@ body {
 
 /* Sidebar Styling */
 .sidebar {
-  background-color: rgba(0, 0, 0, 0.5); /* More transparent sidebar */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent sidebar */
   padding: 20px;
-  height: calc(100vh - 100px); /* Adjust height to fit */
+  height: calc(100vh - 100px);
   position: fixed;
   left: 0;
   width: 200px;
@@ -84,7 +83,7 @@ body {
 }
 
 .sidebar ul li button {
-  background-color: rgba(0, 0, 0, 0.5); /* Transparent button */
+  background-color: rgba(0, 0, 0, 0.7);
   color: #ffffff;
   border: 2px solid #ffffff;
   padding: 10px 20px;
@@ -105,31 +104,31 @@ body {
 .main-content {
   margin-left: 230px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.3); /* Lighter transparency for content area */
   color: #ffffff;
 }
 
-/* Product Section */
-.product-display h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ae4747;
-  text-align: center;
-  margin-bottom: 20px;
+.about-section {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 20px;
-  padding: 20px;
+.about-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  color: #ffffff;
 }
 
 /* Footer */
 .footer {
-  background-color: rgba(255, 255, 255, 0.5); /* Transparent footer */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent footer */
   color: #ffffff;
   padding: 20px;
   text-align: center;
-  margin-top: auto; /* Keeps the footer at the bottom */
+  margin-top: auto;
 }

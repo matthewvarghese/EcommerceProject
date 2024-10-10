@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Dashboard.css';
-
+import './DataSubmissionForm';
+ 
 
 const Dashboard = ({ children }) => {
   const navigate = useNavigate();
