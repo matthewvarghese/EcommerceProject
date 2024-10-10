@@ -1,10 +1,13 @@
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Dashboard.css';
- 
+import useProducts from '../components/useProducts';
+import Product from './Product';
 
 const Dashboard = ({ children }) => {
   const navigate = useNavigate();
+  const { products, loading, error } = useProducts();
 
   const goToProfile = () => navigate('/profile');
   const goToHome = () => navigate('/dashboard');
@@ -35,15 +38,16 @@ const Dashboard = ({ children }) => {
         </ul>
       </aside>
 
-      <main className="main-content about-me">
-        <section className="about-section">
-          <h2>Hello, I'm Matthew Varghese</h2>
-          <p>
-            Welcome to my cool side project! This is something I’ve been working on in my spare time, 
-            and I hope it grows into something even bigger someday. 
-            I'm passionate about creating innovative solutions, and this project is a step toward that journey. 
-            Stay tuned for updates, and thanks for stopping by!
-          </p>
+      <main className="main-content">
+        <section className="product-display">
+          <h2>Featured Products</h2>
+          {loading && <p>Loading products...</p>}
+          {error && <p>Error: {error}</p>}
+          <div className="product-grid">
+            {products.map(product => (
+              <Product key={product.id} product={product} />
+            ))}
+          </div>
         </section>
       </main>
 

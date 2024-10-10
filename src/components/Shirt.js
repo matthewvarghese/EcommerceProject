@@ -39,7 +39,7 @@ const Shirt = ({ children }) => {
 
       <main className="main-content">
         <section className="product-display">
-          <h2> Products</h2>
+          <h2>Featured Products</h2>
           {loading && <p>Loading products...</p>}
           {error && <p>Error: {error}</p>}
           <div className="product-grid">
