@@ -128,10 +128,11 @@ body {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the min width */
   grid-gap: 20px;
   padding: 20px;
 }
+
 
 .product-card {
   background-color: #000000;
@@ -144,8 +145,11 @@ body {
 
 .product-card img {
   width: 100%;
+  height: auto; /* Keeps the aspect ratio intact */
+  object-fit: cover; /* Ensures the image fits the container without distortion */
   border-radius: 10px;
 }
+
 
 .product-card .product-name, .product-card .product-price {
   color: rgb(0, 0, 0); 
