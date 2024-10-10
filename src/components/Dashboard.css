@@ -3,7 +3,7 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("https://codetheworld.io/wp-content/uploads/2024/09/hero-bg.jpg"); 
+  background-image: url("https://codetheworld.io/wp-content/uploads/2024/09/hero-bg.jpg");
   background-size: cover;
   background-position: center;
   color: #ffffff;
@@ -13,12 +13,12 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7); /* Transparent black overlay */
+  background-color: transparent; /* Transparent background to let image show through */
 }
 
 /* Navbar Styling */
 .navbar {
-  background-color: rgba(0, 0, 0, 0.7); /* Transparent navbar */
+  background-color: rgba(0, 0, 0, 0.1); /* More transparency to let background image show */
   padding: 20px;
   text-align: center;
   border-bottom: 2px solid white;
@@ -42,7 +42,7 @@ body {
 }
 
 .navbar nav ul li button {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent button */
   color: #ffffff;
   border: 2px solid #ffffff;
   padding: 10px 20px;
@@ -61,7 +61,7 @@ body {
 
 /* Sidebar Styling */
 .sidebar {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5); /* More transparent sidebar */
   padding: 20px;
   height: calc(100vh - 100px); /* Adjust height to fit */
   position: fixed;
@@ -84,7 +84,7 @@ body {
 }
 
 .sidebar ul li button {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent button */
   color: #ffffff;
   border: 2px solid #ffffff;
   padding: 10px 20px;
@@ -105,7 +105,7 @@ body {
 .main-content {
   margin-left: 230px;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.3); /* Lighter transparency for content area */
   color: #ffffff;
 }
 
@@ -127,7 +127,7 @@ body {
 
 /* Footer */
 .footer {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.5); /* Transparent footer */
   color: #ffffff;
   padding: 20px;
   text-align: center;
