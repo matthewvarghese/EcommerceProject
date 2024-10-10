@@ -3,7 +3,7 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #817777; /* Black background */
+  background-color: #000000; /* Black background */
   color: #ffffff; /* White text */
 }
 
@@ -26,13 +26,14 @@ body {
 
 .navbar h1 {
   font-size: 3rem;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   margin-bottom: 20px;
   
 }
 
 .navbar nav ul {
   list-style: none;
+  color: rgb(255, 255, 255);
   padding: 0;
   margin: 0;
   display: flex;
@@ -63,7 +64,7 @@ body {
 
 /* Sidebar Styling */
 .sidebar {
-  background-color: #7ec7bf;
+  background-color: #ffffff;
   padding: 20px;
   height: calc(700vh - 150px); /* Adjust the height so it fits below header */
   top: 95px; /* Moved down to avoid blocking the title */
@@ -85,6 +86,7 @@ body {
 .sidebar ul {
   list-style: none;
   padding: 0;
+  color: rgb;
   margin: 0;
 }
 
@@ -105,8 +107,8 @@ body {
 .main-content {
   margin-left: 230px;
   padding: 20px;
-  background-color: #000000; /* Keep background black */
-  color: #000000;
+  background-color: #ffffff; /* Keep background black */
+  color: #ffffff;
   min-height: 100vh;
 }
 
@@ -126,7 +128,7 @@ body {
 }
 
 .product-card {
-  background-color: #ffffff;
+  background-color: #000000;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -161,8 +163,8 @@ body {
 
 /* Footer */
 .footer {
-  background-color: #7ec7bf;
-  color: rgb(0, 0, 0);
+  background-color: #000000;
+  color: rgb(255, 255, 255);
   padding: 20px;
   text-align: center;
 }
