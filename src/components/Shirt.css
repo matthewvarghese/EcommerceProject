@@ -111,8 +111,8 @@ body {
   
   /* Main Content Area */
   .main-content {
-    margin-left: 230px;
-    padding: 20px;
+    /* margin-left: 230px;
+    padding: 20px; */
     background-color: rgba(0, 0, 0, 0.6);
     color: #ffffff;
     /* min-height: 100vh; */
