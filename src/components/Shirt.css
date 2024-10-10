@@ -113,7 +113,7 @@ body {
   .main-content {
      margin-left: 230px;
     padding: 20px; 
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.); 
     color: #ffffff;
     /* min-height: 100vh; */
   }
