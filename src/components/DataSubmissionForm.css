@@ -1,13 +1,28 @@
-/* DataSubmissionForm.css */
+/* Apply the same background to the form page */
+body {
+  position: relative; /* Ensure positioning for the pseudo-element */
+}
 
-/* Container for the form */
+/* Background styling for the form page */
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://codetheworld.io/wp-content/uploads/2024/09/hero-bg.jpg"), #000;
+  background-position: center;
+  background-size: cover;
+  z-index: -1; /* Ensure it stays behind other content */
+}
+
+/* Form container styling */
 .form-container {
   max-width: 600px;
-  margin: 30px auto; /* Center and add margin for breathing space */
-  padding: 30px; /* Increased padding for a more spacious feel */
-  background-color: #ffffff;
-  border-radius: 15px; /* Softer, more rounded corners */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Larger shadow for depth */
+  margin: 30px auto; /* Center the form */
+  padding: 30px; /* Increased padding for a spacious feel */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black for better readability */
+  border-radius: 15px; /* Softer corners */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Shadow for depth */
   transition: transform 0.3s ease; /* Smooth transform effect */
 }
 
@@ -19,17 +34,17 @@
 /* Title styling */
 h2 {
   text-align: center;
-  color: #333;
-  font-size: 28px; /* Larger font size for better readability */
+  color: #ffffff;
+  font-size: 28px; /* Larger font size for readability */
   font-weight: 700; /* Bold for emphasis */
   margin-bottom: 20px;
-  text-transform: uppercase; /* Adds a modern feel */
+  text-transform: uppercase; /* Modern feel */
   letter-spacing: 1px;
 }
 
 /* Form group styling */
 .form-group {
-  margin-bottom: 20px; /* More spacing between form groups */
+  margin-bottom: 20px; /* More spacing between groups */
 }
 
 /* Label styling */
@@ -37,27 +52,27 @@ label {
   display: block;
   margin-bottom: 8px;
   font-weight: 600;
-  font-size: 16px; /* Increased size for easier reading */
-  color: #555; /* Slightly softer color */
+  font-size: 16px; /* Increased size */
+  color: #ffffff; /* White labels for contrast */
 }
 
 /* Input field styling */
 input {
   width: 100%;
-  padding: 12px; /* Increased padding for a more comfortable feel */
+  padding: 12px; /* Comfortable padding */
   border: 2px solid #ccc; /* Thicker border for emphasis */
-  border-radius: 8px; /* More rounded corners */
+  border-radius: 8px; /* Rounded corners */
   font-size: 16px;
-  transition: all 0.3s ease; /* Smooth transition for all properties */
+  transition: all 0.3s ease; /* Smooth transition */
   background-color: #f9f9f9; /* Light background for contrast */
 }
 
 /* Input focus effect */
 input:focus {
   border-color: #0070f3;
-  background-color: #eef6ff; /* Subtle change in background on focus */
+  background-color: #eef6ff; /* Change in background on focus */
   outline: none;
-  box-shadow: 0 0 8px rgba(0, 112, 243, 0.2); /* Add a glow effect */
+  box-shadow: 0 0 8px rgba(0, 112, 243, 0.2); /* Glow effect */
 }
 
 /* Submit button styling */
@@ -69,17 +84,17 @@ input:focus {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 18px; /* Slightly larger text */
+  font-size: 18px; /* Larger text */
   font-weight: bold;
-  letter-spacing: 0.5px; /* Adds a more professional feel */
-  text-transform: uppercase; /* For a modern look */
+  letter-spacing: 0.5px; /* Professional feel */
+  text-transform: uppercase; /* Modern look */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
 }
 
 /* Button hover effect */
 .submit-button:hover {
   background-color: #005bb5;
-  transform: translateY(-2px); /* Slight lift effect on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
   box-shadow: 0 6px 16px rgba(0, 91, 181, 0.3); /* Adds a shadow on hover */
 }
 
@@ -90,7 +105,7 @@ input:focus {
   }
 
   h2 {
-      font-size: 24px; /* Reduce title size for small screens */
+      font-size: 24px; /* Reduce title size */
   }
 
   .submit-button {
