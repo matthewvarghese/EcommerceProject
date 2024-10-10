@@ -42,57 +42,57 @@ form {
 
 h1 {
   font-size: 2.5rem;
-  color: #fff; 
+  color: #ffffff !important;
   margin-bottom: 20px;
 }
+
 h2 {
-  font-size: 16px;
-  color: #fff; 
+  font-size: 1.2rem !important; /* Change to make h2 smaller */
+  color: #ffffff !important;
   margin-bottom: 20px;
 }
 
 .input-field {
   position: relative;
-  border-bottom: 2px solid #ccc;
-  margin: 40px 0; 
+  border-bottom: 2px solid #ffffff;
+  margin: 40px 0;
 }
 
 .input-field label {
   position: absolute;
-  color: #fff;
+  color: #ffffff;
   top: 100%; 
   left: 0;
   pointer-events: none;
   transition: .15s ease;
   transform: translateY(-360%);
   font-size: 16px;
-  
 }
-
 
 .input-field input {
   width: 100%;
   height: 40px;
-  color: #fff;
-  background: transparent;
+  color: #000000;
+  background: #ffffff;
   border: none;
   outline: none;
   font-size: 16px;
 }
+
 .input-field input:focus ~ label,
 .input-field input:valid ~ label {
   font-size: 1rem;
   top: 20px; 
+  color: #ffffff;
   transform: translateY(-250%);
 }
-
 
 .forget {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 25px 0 35px 0;
-  color: #fff;
+  color: #ffffff;
 }
 
 #remember {
@@ -128,6 +128,6 @@ button {
 
 .register {
   text-align: center;
-  margin-top: 30px;
-  color: #fff;
+  margin-top: 10px;
+  color: #ffffff;
 }
