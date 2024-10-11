@@ -122,39 +122,35 @@ body {
 
 /* Main Content Area */
 .main-content {
-  margin-left: 230px;
+  margin-left: 230px; /* Ensure this matches the width of your sidebar */
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1); /* Adjust transparency */
+  background-color: rgba(255, 255, 255, 0.1); /* Light transparency */
   color: #ffffff;
   min-height: 100vh;
+  overflow: hidden; /* Prevent overflow into the sidebar */
 }
 
-.product-display h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: rgb(174, 71, 71);
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Unified Product Grid Layout */
+/* Product Grid */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 products per row */
   grid-gap: 20px; /* Space between products */
   padding: 20px;
   justify-items: center; /* Center the product cards horizontally */
+  max-width: calc(100% - 230px); /* Ensure it stays within main content area */
+  margin-left: auto; /* Avoid product grid shifting into sidebar */
 }
 
+/* Product Card */
 .product-card {
   background-color: #ffffff;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   text-align: center;
   color: rgb(0, 0, 0);
   transition: all 0.3s;
   width: 100%; /* Ensures the product card takes full width of the grid item */
-  max-width: 250px; /* Optional: limits product card width */
+  max-width: 200px; /* Adjusted to a balanced size */
 }
 
 .product-card:hover {
@@ -164,16 +160,18 @@ body {
 /* Image Styling */
 .product-card img {
   width: 100%;
-  height: 200px; /* Adjust height to make it a horizontal rectangle */
-  margin-bottom: 1rem; /* Margin below image */
-}
-
-.product-card h3 {
-  font-size: 25px;
-  font-weight: 400;
+  height: 150px; /* Adjusted height for a better size balance */
+  object-fit: cover; /* Ensures the image is properly contained */
   margin-bottom: 1rem;
 }
 
+.product-card h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+/* Product Card Details */
 .product-card .details {
   display: flex;
   justify-content: space-between;
@@ -181,7 +179,7 @@ body {
 }
 
 .product-card .price {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
 }
 
