@@ -1,5 +1,4 @@
 /* Global Styling */
-
 body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -26,16 +25,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center the content */
-  
 }
 
 .navbar h1 {
   font-size: 3rem;
-  color: rgb(198, 194, 194); /* White text for visibility */
-  margin-bottom: 30px; /* Space below the title */
-  font-family: 'Georgia', serif;
-  font-size: 100rem;
+  color: rgb(255, 255, 255); /* White text for visibility */
+  margin-bottom: 20px; /* Space below the title */
+  font-family: 'Courier New', serif;
+  font-weight: bold;
+  font-size: 4rem;
 }
+
 .navbar nav ul {
   list-style: none;
   padding: 0;
@@ -55,6 +55,7 @@ body {
   border: 2px solid rgb(255, 255, 255);
   padding: 10px 20px;
   font-size: 1rem;
+  font-family: 'Courier New', serif;
   font-weight: bold;
   border-radius: 50px;
   cursor: pointer;
@@ -73,7 +74,7 @@ body {
   background-color: #000000;
   padding: 20px;
   height: calc(600vh - 150px); /* Adjust the height so it fits below header */
-  top: 95px; /* Moved down to avoid blocking the title */
+  top: 163px; /* Moved down to avoid blocking the title */
   position: fixed;
   left: 0;
   width: 200px;
@@ -83,6 +84,8 @@ body {
 
 .sidebar h2 {
   font-size: 1.5rem;
+  font-family: 'Courier New', serif;
+  font-weight: bold;
  border-bottom: 2px solid white;
 
   margin-bottom: 20px;
@@ -103,6 +106,8 @@ body {
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: bold;
+  font-family: 'Courier New', serif;
+  font-weight: bold;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s;
@@ -119,11 +124,10 @@ body {
 .main-content {
   margin-left: 230px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1); /* Adjust transparency (0.1 for light transparency) */
+  background-color: rgba(255, 255, 255, 0.1); /* Adjust transparency */
   color: #ffffff;
   min-height: 100vh;
 }
-
 
 .product-display h2 {
   font-size: 2rem;
@@ -133,13 +137,13 @@ body {
   margin-bottom: 20px;
 }
 
-/* Products Grid */
+/* Unified Product Grid Layout */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust to have 3-4 items per row */
+  grid-template-columns: repeat(4, 1fr); /* 4 products per row */
   grid-gap: 20px; /* Space between products */
   padding: 20px;
-  justify-items: center; /* Center the grid items horizontally */
+  justify-items: center; /* Center the product cards horizontally */
 }
 
 .product-card {
@@ -149,99 +153,39 @@ body {
   text-align: center;
   color: rgb(0, 0, 0);
   transition: all 0.3s;
+  width: 100%; /* Ensures the product card takes full width of the grid item */
+  max-width: 250px; /* Optional: limits product card width */
 }
 
-.product img {
-  width: 100%; /* Set width to 100% of the container */
+.product-card:hover {
+  transform: translateY(-5px); /* Hover effect */
+}
+
+/* Image Styling */
+.product-card img {
+  width: 100%;
   height: 200px; /* Adjust height to make it a horizontal rectangle */
-  margin: 0 auto 1rem auto; /* Center the image */
+  margin-bottom: 1rem; /* Margin below image */
 }
 
-.product-card .product-name, .product-card .product-price {
-  color: rgb(255, 255, 255); /* Ensure product name and price are white */
-  font-size: 1.2rem;
-}
-
-.product-card button {
-  background-color: #ff5733;
-  color: rgb(0, 0, 0);
-  padding: 10px;
-  border: none;
-  border-radius: 50px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.product-card button:hover {
-  background-color: #c70039;
-}
-
-/* Footer */
-.footer {
-  background-color: #000000;
-  color: rgb(255, 255, 255);
-  padding: 20px;
-  text-align: center;
-}
-/* Responsive styling */
-@media (max-width: 768px) {
-  .products {
-    grid-template-columns: 1fr; /* One product per row on smaller screens */
-  }
-}
-
-
-
-
-
-
-/* Products Styling */
-.products {
-  display: grid; /* Use grid layout */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensure 3-4 items per row, depending on the screen width */
-  grid-gap: 2rem; /* Space between products */
-  justify-content: center; /* Center the grid items */
-  margin-top: 2rem;
-}
-
-.product {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem;
-  border-radius: 15px;
-  width: 100%; /* Full width in grid item */
-  height: auto;
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 2px 2px 5px rgba(94, 104, 121, 0.3);
-  transition: transform 0.3s;
-}
-
-
-.product:hover {
-  transform: translateY(-5px); /* Slight hover effect */
-}
-
-.product h3 {
+.product-card h3 {
   font-size: 25px;
   font-weight: 400;
   margin-bottom: 1rem;
 }
 
-
-
-.product .details {
+.product-card .details {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.product .details .price {
+.product-card .price {
   font-size: 20px;
   font-weight: 700;
 }
 
-.product button {
+.product-card button {
   width: 100%;
   height: 40px;
   border-radius: 5px;
@@ -255,10 +199,44 @@ body {
   transition: background-color 0.3s;
 }
 
-.product button:hover {
+.product-card button:hover {
   background-color: #3a59b8;
 }
 
+/* Responsive styling */
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 products per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 products per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 product per row on very small screens */
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+.footer {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  text-align: center;
+}
 
 
 
