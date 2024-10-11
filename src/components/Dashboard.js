@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../index.css';
 import useProducts from '../components/useProducts';
 import Product from './Product';
 
