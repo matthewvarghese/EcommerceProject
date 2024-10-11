@@ -150,7 +150,7 @@ body {
   color: rgb(0, 0, 0);
   transition: all 0.3s;
   width: 100%; /* Ensures the product card takes full width of the grid item */
-  max-width: 200px; /* Adjusted to a balanced size */
+  max-width: 100px; /* Adjusted to a balanced size */
 }
 
 .product-card:hover {
@@ -159,9 +159,8 @@ body {
 
 /* Image Styling */
 .product-card img {
-  width: 60%;
-  height: 90px; /* Adjusted height for a better size balance */
-  object-fit: cover; /* Ensures the image is properly contained */
+  width: 50%;
+  height: 60px; /* Adjusted height for a better size balance */
   margin-bottom: 1rem;
 }
 
