@@ -34,7 +34,7 @@ body {
   color: rgb(198, 194, 194); /* White text for visibility */
   margin-bottom: 30px; /* Space below the title */
   font-family: 'Georgia', serif;
-  font-size: 100rem;
+  font-size: 3rem;
 }
 .navbar nav ul {
   list-style: none;
