@@ -1,4 +1,5 @@
 /* Global Styling */
+
 body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -25,17 +26,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center the content */
+  
 }
 
 .navbar h1 {
   font-size: 3rem;
-  color: rgb(255, 255, 255); /* White text for visibility */
-  margin-bottom: 20px; /* Space below the title */
-  font-family: 'Courier New', serif;
-  font-weight: bold;
-  font-size: 4rem;
+  color: rgb(198, 194, 194); /* White text for visibility */
+  margin-bottom: 30px; /* Space below the title */
+  font-family: 'Georgia', serif;
+  font-size: 100rem;
 }
-
 .navbar nav ul {
   list-style: none;
   padding: 0;
@@ -55,7 +55,6 @@ body {
   border: 2px solid rgb(255, 255, 255);
   padding: 10px 20px;
   font-size: 1rem;
-  font-family: 'Courier New', serif;
   font-weight: bold;
   border-radius: 50px;
   cursor: pointer;
@@ -74,7 +73,7 @@ body {
   background-color: #000000;
   padding: 20px;
   height: calc(600vh - 150px); /* Adjust the height so it fits below header */
-  top: 163px; /* Moved down to avoid blocking the title */
+  top: 95px; /* Moved down to avoid blocking the title */
   position: fixed;
   left: 0;
   width: 200px;
@@ -84,8 +83,6 @@ body {
 
 .sidebar h2 {
   font-size: 1.5rem;
-  font-family: 'Courier New', serif;
-  font-weight: bold;
  border-bottom: 2px solid white;
 
   margin-bottom: 20px;
@@ -105,8 +102,6 @@ body {
   border: 2px solid rgb(255, 255, 255);
   padding: 10px 20px;
   font-size: 1rem;
-  font-weight: bold;
-  font-family: 'Courier New', serif;
   font-weight: bold;
   border-radius: 50px;
   cursor: pointer;
@@ -138,11 +133,13 @@ body {
   margin-bottom: 20px;
 }
 
+/* Products Grid */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust to have 3-4 items per row */
+  grid-gap: 20px; /* Space between products */
   padding: 20px;
+  justify-items: center; /* Center the grid items horizontally */
 }
 
 .product-card {
@@ -155,7 +152,7 @@ body {
 }
 
 .product img {
-  width: 100%; /* Set width to 100% of the container */width: 100%; /* Set width to 100% of the container */
+  width: 100%; /* Set width to 100% of the container */
   height: 200px; /* Adjust height to make it a horizontal rectangle */
   margin: 0 auto 1rem auto; /* Center the image */
 }
@@ -197,10 +194,12 @@ body {
 
 
 
+
+
 /* Products Styling */
 .products {
   display: grid; /* Use grid layout */
-  grid-template-columns: repeat(2, 1fr); /* Two products per row */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensure 3-4 items per row, depending on the screen width */
   grid-gap: 2rem; /* Space between products */
   justify-content: center; /* Center the grid items */
   margin-top: 2rem;
@@ -213,11 +212,11 @@ body {
   padding: 1rem;
   border-radius: 15px;
   width: 100%; /* Full width in grid item */
-  height: 400px;
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
-    2px 2px 5px rgba(94, 104, 121, 0.3);
+  height: auto;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 2px 2px 5px rgba(94, 104, 121, 0.3);
   transition: transform 0.3s;
 }
+
 
 .product:hover {
   transform: translateY(-5px); /* Slight hover effect */
