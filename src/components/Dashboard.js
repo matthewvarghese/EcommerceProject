@@ -4,18 +4,7 @@ import '../index.css';
 import './Dashboard.css'
 
 const About = () => {
-  return (
-    <section className="about-section">
-      <h1 className="about-header">About Artemis</h1>
-      <p className="about-content">
-        Artemis is your ultimate destination for quality apparel. Our mission is to provide
-        a seamless shopping experience while offering a wide range of stylish and comfortable
-        clothing for every occasion. Whether you're looking for casual wear, work attire, or
-        something special, we have you covered. Join us on this fashion journey and discover
-        the perfect pieces to express your unique style!
-      </p>
-    </section>
-  );
+
 };
 
 const Dashboard = () => {
@@ -50,8 +39,15 @@ const Dashboard = () => {
         </ul>
       </aside>
 
-      <main className="main-content">
-        <About />
+      <main className="about-section">
+      <h1 className="about-header">About Artemis</h1>
+      <p className="about-content">
+        Artemis is your ultimate destination for quality apparel. Our mission is to provide
+        a seamless shopping experience while offering a wide range of stylish and comfortable
+        clothing for every occasion. Whether you're looking for casual wear, work attire, or
+        something special, we have you covered. Join us on this fashion journey and discover
+        the perfect pieces to express your unique style!
+      </p>
       </main>
 
       <footer className="footer">
