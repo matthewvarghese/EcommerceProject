@@ -181,3 +181,23 @@ body {
   }
 }
 
+.about-section {
+  text-align: center; /* Center text */
+  padding: 40px; /* Add padding for spacing */
+  background-color: rgba(255, 255, 255, 0.1); /* Light background with transparency */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.about-header {
+  font-size: 3rem; /* Large font size for the header */
+  color: rgb(174, 71, 71); /* Color for the header */
+  margin-bottom: 20px; /* Space below the header */
+}
+
+.about-content {
+  font-size: 1.5rem; /* Font size for the content */
+  color: #ffffff; /* White text for contrast */
+  line-height: 1.6; /* Line height for readability */
+  max-width: 800px; /* Max width for content */
+  margin: 0 auto; /* Center content */
+}

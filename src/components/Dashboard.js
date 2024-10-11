@@ -1,13 +1,25 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../index.css';
-import useProducts from '../components/useProducts';
-import Product from './Product';
+import './Dashboard.css'
 
-const Dashboard = ({ children }) => {
+const About = () => {
+  return (
+    <section className="about-section">
+      <h1 className="about-header">About Artemis</h1>
+      <p className="about-content">
+        Artemis is your ultimate destination for quality apparel. Our mission is to provide
+        a seamless shopping experience while offering a wide range of stylish and comfortable
+        clothing for every occasion. Whether you're looking for casual wear, work attire, or
+        something special, we have you covered. Join us on this fashion journey and discover
+        the perfect pieces to express your unique style!
+      </p>
+    </section>
+  );
+};
+
+const Dashboard = () => {
   const navigate = useNavigate();
-  const { products, loading, error } = useProducts();
 
   const goToProfile = () => navigate('/profile');
   const goToHome = () => navigate('/dashboard');
@@ -39,16 +51,7 @@ const Dashboard = ({ children }) => {
       </aside>
 
       <main className="main-content">
-        <section className="product-display">
-          <h2>Featured Products</h2>
-          {loading && <p>Loading products...</p>}
-          {error && <p>Error: {error}</p>}
-          <div className="product-grid">
-            {products.map(product => (
-              <Product key={product.id} product={product} />
-            ))}
-          </div>
-        </section>
+        <About />
       </main>
 
       <footer className="footer">
