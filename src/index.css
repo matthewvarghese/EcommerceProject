@@ -182,9 +182,21 @@ body {
   text-align: center;
 }
 /* Responsive styling */
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr) !important; /* 4 products per row on medium screens */
+  }
+}
+
 @media (max-width: 768px) {
-  .products {
-    grid-template-columns: 1fr; /* One product per row on smaller screens */
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr) !important; /* 3 products per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 products per row on very small screens */
   }
 }
 
