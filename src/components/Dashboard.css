@@ -122,51 +122,51 @@ body {
 
 /* Main Content Area */
 .main-content {
-  margin-left: 230px; /* Ensure this matches the width of your sidebar */
+  margin-left: 230px; /* Space for the sidebar */
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1); /* Light transparency */
+  background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
   min-height: 100vh;
-  overflow: hidden; /* Prevent overflow into the sidebar */
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 /* Product Grid */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 products per row */
-  grid-gap: 20px; /* Space between products */
+  grid-gap: 15px; /* Space between products */
   padding: 20px;
   justify-items: center; /* Center the product cards horizontally */
-  max-width: calc(100% - 230px); /* Ensure it stays within main content area */
-  margin-left: auto; /* Avoid product grid shifting into sidebar */
+  max-width: 100%; /* Ensure it stays within main content area */
+  margin-left: 0; /* Align to the left within the content */
 }
 
 /* Product Card */
 .product-card {
   background-color: #ffffff;
-  padding: 15px;
+  padding: 10px;
   border-radius: 10px;
   text-align: center;
   color: rgb(0, 0, 0);
   transition: all 0.3s;
-  width: 100%; /* Ensures the product card takes full width of the grid item */
-  max-width: 100px; /* Adjusted to a balanced size */
+  width: 100%; 
+  max-width: 150px; /* Make product cards smaller */
 }
 
 .product-card:hover {
-  transform: translateY(-5px); /* Hover effect */
+  transform: translateY(-3px); /* Hover effect */
 }
 
 /* Image Styling */
 .product-card img {
-  width: 50%;
-  height: 60px; /* Adjusted height for a better size balance */
-  margin-bottom: 1rem;
+  width: 100%;
+  height: 120px; /* Smaller image size */
+  object-fit: cover;
+  margin-bottom: 0.5rem;
 }
 
-
 .product-card h3 {
-  font-size: 20px;
+  font-size: 16px; /* Smaller title font size */
   font-weight: 400;
   margin-bottom: 0.5rem;
 }
@@ -179,15 +179,15 @@ body {
 }
 
 .product-card .price {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .product-card button {
   width: 100%;
-  height: 40px;
+  height: 30px; /* Smaller button */
   border-radius: 5px;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   font-weight: 400;
   letter-spacing: 1.15px;
   background-color: #4b70e2;
