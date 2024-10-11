@@ -1,4 +1,5 @@
 /* Global Styling */
+
 body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -25,14 +26,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center the content */
+  
 }
 
 .navbar h1 {
   font-size: 3rem;
-  color: rgb(255, 255, 255); /* White text for visibility */
-  margin-bottom: 20px; /* Space below the title */
+  color: rgb(198, 194, 194); /* White text for visibility */
+  margin-bottom: 30px; /* Space below the title */
+  font-family: 'Georgia', serif;
+  font-size: 100rem;
 }
-
 .navbar nav ul {
   list-style: none;
   padding: 0;

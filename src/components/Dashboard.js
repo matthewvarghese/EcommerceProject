@@ -16,8 +16,10 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <header className="navbar">
+      <header className="navbar"
+      >
         <h1>Artemis</h1>
+        
         <nav>
           <ul>
             <li><button onClick={goToHome}>Home</button></li>

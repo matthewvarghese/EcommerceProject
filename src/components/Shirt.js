@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './shirt.css';
+import './Dashboard';
+import "../index.css"
 import useProducts from '../components/useProducts';
 import Product from './Product';
 

@@ -31,6 +31,9 @@ body {
   font-size: 3rem;
   color: rgb(255, 255, 255); /* White text for visibility */
   margin-bottom: 20px; /* Space below the title */
+  font-family: 'Courier New', serif;
+  font-weight: bold;
+  font-size: 4rem;
 }
 
 .navbar nav ul {
@@ -52,6 +55,7 @@ body {
   border: 2px solid rgb(255, 255, 255);
   padding: 10px 20px;
   font-size: 1rem;
+  font-family: 'Courier New', serif;
   font-weight: bold;
   border-radius: 50px;
   cursor: pointer;
@@ -70,7 +74,7 @@ body {
   background-color: #000000;
   padding: 20px;
   height: calc(600vh - 150px); /* Adjust the height so it fits below header */
-  top: 143px; /* Moved down to avoid blocking the title */
+  top: 163px; /* Moved down to avoid blocking the title */
   position: fixed;
   left: 0;
   width: 200px;
@@ -80,6 +84,8 @@ body {
 
 .sidebar h2 {
   font-size: 1.5rem;
+  font-family: 'Courier New', serif;
+  font-weight: bold;
  border-bottom: 2px solid white;
 
   margin-bottom: 20px;
@@ -99,6 +105,8 @@ body {
   border: 2px solid rgb(255, 255, 255);
   padding: 10px 20px;
   font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Courier New', serif;
   font-weight: bold;
   border-radius: 50px;
   cursor: pointer;
