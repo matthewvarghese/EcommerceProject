@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Dashboard.css';
@@ -12,6 +13,9 @@ const Dashboard = ({ children }) => {
   const goToHome = () => navigate('/dashboard');
   const goToSubmitData = () => navigate('/submit-data');
   const goToShirts = () => navigate('/shirt');
+  const goToPants = () => navigate('/pants');
+  const goToShorts = () => navigate('/shorts');
+  const goToDressShirts = () => navigate('/dress-shirt');
   const goToLogout = () => navigate('/');
 
   return (
@@ -33,7 +37,10 @@ const Dashboard = ({ children }) => {
       <aside className="sidebar">
         <h2>Categories</h2>
         <ul>
-          <li><button onClick={goToShirts}>Products</button></li>
+          <li><button onClick={goToShirts}>T-Shirts</button></li>
+          <li><button onClick={goToPants}>Pants</button></li>
+          <li><button onClick={goToShorts}>Shorts</button></li>
+          <li><button onClick={goToDressShirts}>Dress Shirts</button></li>
         </ul>
       </aside>
 
@@ -51,7 +58,7 @@ const Dashboard = ({ children }) => {
       </main>
 
       <footer className="footer">
-        <p>&copy; 2024 Artemis. All rights reserved</p>
+        <p>&copy; 2024 Artemis. All rights reserved.</p>
       </footer>
     </div>
   );

@@ -3,7 +3,7 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffffff; /* Black background */
+  background-color: #000000; /* Black background */
   color: #ffffff; /* White text */
 }
 
@@ -67,7 +67,7 @@ body {
   background-color: #000000;
   padding: 20px;
   height: calc(700vh - 150px); /* Adjust the height so it fits below header */
-  top: 95px;
+  top: 95px; /* Moved down to avoid blocking the title */
   position: fixed;
   left: 0;
   width: 200px;
@@ -111,11 +111,11 @@ body {
 
 /* Main Content Area */
 .main-content {
-   margin-left: 230px;
-  padding: 20px; 
-  background-color: rgba(0, 0, 0, 0.5); 
+  margin-left: 230px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.001);
   color: #ffffff;
-  /* min-height: 100vh; */
+  min-height: 100vh;
 }
 
 .product-display h2 {
@@ -148,7 +148,7 @@ body {
 }
 
 .product-card .product-name, .product-card .product-price {
-  color: rgb(0, 0, 0); 
+  color: rgb(0, 0, 0); /* Ensure product name and price are white */
   font-size: 1.2rem;
 }
 

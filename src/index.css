@@ -1,134 +1,89 @@
-/* Global Styling */
-body {
-  font-family: 'Helvetica Neue', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-image: url("https://codetheworld.io/wp-content/uploads/2024/09/hero-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
+/* Home */
+.home-container {
+  padding: 2rem 4rem;
+  margin-top: 100px; /* Increase the margin to push content further down */
 }
 
-.dashboard {
+
+.home-container h2 {
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+}
+body {
+  padding-top: 100px; /* Adds padding at the top to ensure nothing overlaps the header */
+}
+
+
+/* Products Styling */
+.products {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(2, 1fr); /* Two products per row */
+  grid-gap: 2rem; /* Space between products */
+  justify-content: center; /* Center the grid items */
+  margin-top: 2rem;
+}
+
+.product {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 15px;
+  width: 100%; /* Full width in grid item */
+  height: 400px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+    2px 2px 5px rgba(94, 104, 121, 0.3);
+  transition: transform 0.3s;
 }
 
-
-.navbar {
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent navbar */
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid white;
+.product:hover {
+  transform: translateY(-5px); /* Slight hover effect */
 }
 
-.navbar h1 {
-  font-size: 3rem;
-  color: #ffffff;
+.product h3 {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 1rem;
 }
 
-.navbar nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.product img {
+  width: 80%;
+  margin: 0 auto 1rem auto; /* Center the image */
+}
+
+.product .details {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navbar nav ul li {
-  margin: 0 10px;
+.product .details .price {
+  font-size: 20px;
+  font-weight: 700;
 }
 
-.navbar nav ul li button {
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent buttons */
-  color: #ffffff;
-  border: 2px solid #ffffff;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 50px;
+.product button {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-weight: 400;
+  letter-spacing: 1.15px;
+  background-color: #4b70e2;
+  color: #f9f9f9;
+  border: none;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: background-color 0.3s;
 }
 
-.navbar nav ul li button:hover {
-  background-color: #eadede;
-  color: #000;
-  border-color: #817777;
+.product button:hover {
+  background-color: #3a59b8;
 }
 
-/* Sidebar Styling */
-.sidebar {
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent sidebar */
-  padding: 20px;
-  height: calc(100vh - 100px);
-  position: fixed;
-  left: 0;
-  width: 200px;
-  border-right: 2px solid white;
-  overflow-y: auto;
-}
-
-.sidebar h2 {
-  font-size: 1.5rem;
-  border-bottom: 2px solid white;
-  margin-bottom: 20px;
-  color: #ffffff;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar ul li button {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #ffffff;
-  border: 2px solid #ffffff;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.sidebar ul li button:hover {
-  background-color: #eadede;
-  color: #000;
-  border-color: #817777;
-}
-
-/* Main Content Area */
-.main-content {
-  margin-left: 230px;
-  padding: 20px;
-  color: #ffffff;
-}
-
-.about-section {
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.about-section h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-.about-section p {
-  font-size: 1.2rem;
-  color: #ffffff;
-}
-
-/* Footer */
-.footer {
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent footer */
-  color: #ffffff;
-  padding: 20px;
-  text-align: center;
-  margin-top: auto;
+/* Responsive styling */
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: 1fr; /* One product per row on smaller screens */
+  }
 }

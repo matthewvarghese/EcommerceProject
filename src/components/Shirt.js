@@ -1,10 +1,11 @@
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Dashboard.css';
 import useProducts from '../components/useProducts';
 import Product from './Product';
 
-const Shirt = ({ children }) => {
+const Dashboard = ({ children }) => {
   const navigate = useNavigate();
   const { products, loading, error } = useProducts();
 
@@ -12,10 +13,13 @@ const Shirt = ({ children }) => {
   const goToHome = () => navigate('/dashboard');
   const goToSubmitData = () => navigate('/submit-data');
   const goToShirts = () => navigate('/shirt');
+  const goToPants = () => navigate('/pants');
+  const goToShorts = () => navigate('/shorts');
+  const goToDressShirts = () => navigate('/dress-shirt');
   const goToLogout = () => navigate('/');
 
   return (
-    <div className="Products">
+    <div className="dashboard">
       <header className="navbar">
         <h1>Artemis</h1>
         <nav>
@@ -33,7 +37,10 @@ const Shirt = ({ children }) => {
       <aside className="sidebar">
         <h2>Categories</h2>
         <ul>
-          <li><button onClick={goToShirts}>Products</button></li>
+          <li><button onClick={goToShirts}>T-Shirts</button></li>
+          <li><button onClick={goToPants}>Pants</button></li>
+          <li><button onClick={goToShorts}>Shorts</button></li>
+          <li><button onClick={goToDressShirts}>Dress Shirts</button></li>
         </ul>
       </aside>
 
@@ -51,10 +58,10 @@ const Shirt = ({ children }) => {
       </main>
 
       <footer className="footer">
-        <p>&copy; 2024 Artemis. All rights reserved</p>
+        <p>&copy; 2024 Artemis. All rights reserved.</p>
       </footer>
     </div>
   );
 };
 
-export default Shirt;
+export default Dashboard;
