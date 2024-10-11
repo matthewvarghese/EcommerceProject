@@ -135,7 +135,7 @@ body {
 
 .product-grid {
   display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important; /* 5 products per row for more compact layout */
+  grid-template-columns: repeat(4, 1fr) !important; /* 5 products per row for more compact layout */
   grid-gap: 10px !important; /* Smaller space between products */
   padding: 10px !important;
   justify-items: center !important; /* Center the product cards horizontally */
@@ -153,7 +153,7 @@ body {
 }
 
 .product img {
-  width: 40%;
+  width: 50%;
   margin: 0 auto 1rem auto; /* Center the image */
 }
 
