@@ -41,11 +41,11 @@ const Dashboard = () => {
         <section className="about-section">
           <h3>Hi, Welcome to Artemis</h3>
           <p>
-            This is something I’ve been working on for a project, 
-            and I hope it grows into something even bigger someday. 
+            This website is something I’ve been working on for a project, 
+            and I'm hoping it grows into something even bigger someday. 
             I'm passionate about creating a unique business experience
-            and this project is a step toward that journey. 
-            I hope you can find whatever clothing you are looking for.
+            and Artemis is a step toward that journey. 
+            I hope you enjoy your time here and can find whatever clothing you are looking for.
             Happy Shopping!
           </p>
         </section>
