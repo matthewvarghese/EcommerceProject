@@ -13,9 +13,7 @@ const Dashboard = ({ children }) => {
   const goToHome = () => navigate('/dashboard');
   const goToSubmitData = () => navigate('/submit-data');
   const goToShirts = () => navigate('/shirt');
-  const goToPants = () => navigate('/pants');
-  const goToShorts = () => navigate('/shorts');
-  const goToDressShirts = () => navigate('/dress-shirt');
+
   const goToLogout = () => navigate('/');
 
   return (
@@ -37,10 +35,7 @@ const Dashboard = ({ children }) => {
       <aside className="sidebar">
         <h2>Categories</h2>
         <ul>
-          <li><button onClick={goToShirts}>T-Shirts</button></li>
-          <li><button onClick={goToPants}>Pants</button></li>
-          <li><button onClick={goToShorts}>Shorts</button></li>
-          <li><button onClick={goToDressShirts}>Dress Shirts</button></li>
+          <li><button onClick={goToShirts}>Products</button></li>
         </ul>
       </aside>
 

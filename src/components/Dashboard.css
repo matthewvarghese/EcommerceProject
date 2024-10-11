@@ -134,7 +134,7 @@ body {
 }
 
 .product-card {
-  background-color: #000000;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -148,7 +148,7 @@ body {
 }
 
 .product-card .product-name, .product-card .product-price {
-  color: rgb(0, 0, 0); /* Ensure product name and price are white */
+  color: rgb(255, 255, 255); /* Ensure product name and price are white */
   font-size: 1.2rem;
 }
 
