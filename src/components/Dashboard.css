@@ -159,11 +159,12 @@ body {
 
 /* Image Styling */
 .product-card img {
-  width: 100%;
-  height: 150px; /* Adjusted height for a better size balance */
+  width: 60%;
+  height: 90px; /* Adjusted height for a better size balance */
   object-fit: cover; /* Ensures the image is properly contained */
   margin-bottom: 1rem;
 }
+
 
 .product-card h3 {
   font-size: 20px;
