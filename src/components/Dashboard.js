@@ -39,11 +39,11 @@ const Dashboard = () => {
 
       <main className="main-content about-me">
         <section className="about-section">
-          <h2>Hi, Welcome to Artemis</h2>
+          <h3>Hi, Welcome to Artemis</h3>
           <p>
             This is something I’ve been working on for a project, 
             and I hope it grows into something even bigger someday. 
-            I'm passionate about creating a unqiue business
+            I'm passionate about creating a unique business experience
             and this project is a step toward that journey. 
             I hope you can find whatever clothing you are looking for.
             Happy Shopping!

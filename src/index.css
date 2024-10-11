@@ -250,6 +250,15 @@ body {
 
 
 
+
+.about-section h3 {
+  font-size: 4rem; /* Large font size for the header */
+  color: rgb(128, 73, 73); /* Color for the header */
+  margin-bottom: 20px; /* Space below the header */
+  
+  text-align: center;
+}
+
 .about-section {
   font-size: 1.5rem; /* Font size for the content */
   color: #ffffff; /* White text for contrast */
