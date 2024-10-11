@@ -22,22 +22,24 @@ body {
   text-align: center;
   border-bottom: 2px solid white;
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content */
 }
 
 .navbar h1 {
   font-size: 3rem;
-  color: rgb(0, 0, 0);
-  margin-bottom: 20px;
-  
+  color: rgb(255, 255, 255); /* White text for visibility */
+  margin-bottom: 20px; /* Space below the title */
 }
 
 .navbar nav ul {
   list-style: none;
-  color: rgb(255, 255, 255);
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* Allow buttons to wrap if needed */
 }
 
 .navbar nav ul li {
@@ -62,12 +64,13 @@ body {
   border-color: #817777;
 }
 
+
 /* Sidebar Styling */
 .sidebar {
   background-color: #000000;
   padding: 20px;
-  height: calc(700vh - 150px); /* Adjust the height so it fits below header */
-  top: 95px; /* Moved down to avoid blocking the title */
+  height: calc(600vh - 150px); /* Adjust the height so it fits below header */
+  top: 143px; /* Moved down to avoid blocking the title */
   position: fixed;
   left: 0;
   width: 200px;
@@ -113,10 +116,11 @@ body {
 .main-content {
   margin-left: 230px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.001);
+  background-color: rgba(255, 255, 255, 0.1); /* Adjust transparency (0.1 for light transparency) */
   color: #ffffff;
   min-height: 100vh;
 }
+
 
 .product-display h2 {
   font-size: 2rem;
@@ -181,3 +185,88 @@ body {
   }
 }
 
+
+
+
+/* Products Styling */
+.products {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(2, 1fr); /* Two products per row */
+  grid-gap: 2rem; /* Space between products */
+  justify-content: center; /* Center the grid items */
+  margin-top: 2rem;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 15px;
+  width: 100%; /* Full width in grid item */
+  height: 400px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+    2px 2px 5px rgba(94, 104, 121, 0.3);
+  transition: transform 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px); /* Slight hover effect */
+}
+
+.product h3 {
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+
+
+.product .details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product .details .price {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.product button {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-weight: 400;
+  letter-spacing: 1.15px;
+  background-color: #4b70e2;
+  color: #f9f9f9;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product button:hover {
+  background-color: #3a59b8;
+}
+
+
+
+
+.about-section h3 {
+  font-size: 4rem; /* Large font size for the header */
+  color: rgb(128, 73, 73); /* Color for the header */
+  margin-bottom: 20px; /* Space below the header */
+  
+  text-align: center;
+}
+
+.about-section {
+  font-size: 1.5rem; /* Font size for the content */
+  color: #ffffff; /* White text for contrast */
+  line-height: 2.0; /* Line height for readability */
+  max-width: 1500px; /* Max width for content */
+
+  margin: 0 auto; /* Center content */
+}
