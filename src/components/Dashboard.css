@@ -158,7 +158,6 @@ body {
   width: 100%; /* Set width to 100% of the container */
   height: 200px; /* Adjust height to make it a horizontal rectangle */
   object-fit: cover; /* Ensures the image covers the space without distortion */
-  margin: 0 auto 1rem auto; /* Keep the image centered */
 }
 
 
