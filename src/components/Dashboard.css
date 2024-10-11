@@ -142,9 +142,9 @@ body {
   transition: all 0.3s;
 }
 
-.product-card img {
-  width: 100%;
-  border-radius: 10px;
+.product img {
+  width: 80%;
+  margin: 0 auto 1rem auto; /* Center the image */
 }
 
 .product-card .product-name, .product-card .product-price {
@@ -174,3 +174,10 @@ body {
   padding: 20px;
   text-align: center;
 }
+/* Responsive styling */
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: 1fr; /* One product per row on smaller screens */
+  }
+}
+
