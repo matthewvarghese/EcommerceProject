@@ -51,7 +51,7 @@ const Dashboard = ({ children }) => {
       </main>
 
       <footer className="footer">
-        <p>&copy; 2024 Artemis. All rights reserved.</p>
+        <p>&copy; 2024 Artemis. All rights reserved</p>
       </footer>
     </div>
   );

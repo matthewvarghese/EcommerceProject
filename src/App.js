@@ -9,7 +9,7 @@ import Signup from './components/Signup';
 import Success from './Success';
 import Cancel from './Cancel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import FullPageComponent from './FullPageComponent';
+
 
 const App = () => {
   const [userData, setUserData] = useState(null);

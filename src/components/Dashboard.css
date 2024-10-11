@@ -67,7 +67,7 @@ body {
   background-color: #000000;
   padding: 20px;
   height: calc(700vh - 150px); /* Adjust the height so it fits below header */
-  top: 95px; /* Moved down to avoid blocking the title */
+  top: 95px;
   position: fixed;
   left: 0;
   width: 200px;
