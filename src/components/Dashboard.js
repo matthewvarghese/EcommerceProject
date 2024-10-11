@@ -3,9 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../index.css';
 import './Dashboard.css'
 
-const About = () => {
 
-};
 
 const Dashboard = () => {
   const navigate = useNavigate();
