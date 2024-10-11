@@ -133,11 +133,13 @@ body {
   margin-bottom: 20px;
 }
 
+/* Products Grid */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust to have 3-4 items per row */
+  grid-gap: 20px; /* Space between products */
   padding: 20px;
+  justify-items: center; /* Center the grid items horizontally */
 }
 
 .product-card {
@@ -192,10 +194,12 @@ body {
 
 
 
+
+
 /* Products Styling */
 .products {
   display: grid; /* Use grid layout */
-  grid-template-columns: repeat(2, 1fr); /* Two products per row */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensure 3-4 items per row, depending on the screen width */
   grid-gap: 2rem; /* Space between products */
   justify-content: center; /* Center the grid items */
   margin-top: 2rem;
@@ -208,11 +212,11 @@ body {
   padding: 1rem;
   border-radius: 15px;
   width: 100%; /* Full width in grid item */
-  height: 400px;
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
-    2px 2px 5px rgba(94, 104, 121, 0.3);
+  height: auto;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 2px 2px 5px rgba(94, 104, 121, 0.3);
   transition: transform 0.3s;
 }
+
 
 .product:hover {
   transform: translateY(-5px); /* Slight hover effect */
