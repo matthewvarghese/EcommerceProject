@@ -155,7 +155,8 @@ body {
 }
 
 .product img {
-  width: 100%; /* Set width to 100% of the container */
+  width: 100%; /* Set width to 100% of the container */width: 100%; /* Set width to 100% of the container */
+  height: 200px; /* Adjust height to make it a horizontal rectangle */
   margin: 0 auto 1rem auto; /* Center the image */
 }
 
