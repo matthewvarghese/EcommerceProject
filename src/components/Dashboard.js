@@ -37,15 +37,18 @@ const Dashboard = () => {
         </ul>
       </aside>
 
-      <main className="about-section">
-      <h1 className="about-header">About Artemis</h1>
-      <p className="about-content">
-        Artemis is your ultimate destination for quality apparel. Our mission is to provide
-        a seamless shopping experience while offering a wide range of stylish and comfortable
-        clothing for every occasion. Whether you're looking for casual wear, work attire, or
-        something special, we have you covered. Join us on this fashion journey and discover
-        the perfect pieces to express your unique style!
-      </p>
+      <main className="main-content about-me">
+        <section className="about-section">
+          <h2>Hi, Welcome to Artemis</h2>
+          <p>
+            This is something I’ve been working on for a project, 
+            and I hope it grows into something even bigger someday. 
+            I'm passionate about creating a unqiue business
+            and this project is a step toward that journey. 
+            I hope you can find whatever clothing you are looking for.
+            Happy Shopping!
+          </p>
+        </section>
       </main>
 
       <footer className="footer">
