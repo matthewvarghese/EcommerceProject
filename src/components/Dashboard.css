@@ -129,6 +129,9 @@ body {
   min-height: 100vh;
 }
 
+.main-content h2{
+  text-align: center;
+}
 
 .product-display h2 {
   font-size: 2rem;
